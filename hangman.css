@@ -1,0 +1,85 @@
+*{
+    padding: 0%;
+    margin:0%;
+    box-sizing: border-box;
+}
+
+body{
+    color: rgb(233, 233, 233);
+    font-family: sans-serif;
+}
+
+section{
+    height: 100vh;
+    width: 100vw;
+    background: #1a1a1d;
+}
+
+.title{
+    color: #950740;
+    font-size: 3rem;
+    margin-top: 10px;
+    font-family: 'ZCOOL KuaiLe', cursive;
+}
+
+.all-cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.man-and-keys{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 100px 50px 100px; 
+    width: 100vw;
+}
+
+.man-hanging{
+    margin-left: 50px;
+}
+
+.btns{
+    margin-right: 50px;
+}
+
+.btns ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ; 
+}
+
+.btns ul li{
+    list-style: none;
+    padding: 15px 18px 15px 18px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #950740;
+    transition: all 0.2s ease-in-out;
+}
+
+.btns ul li span{
+    pointer-events: none;
+}
+
+.btns ul li:hover{
+    background: #C3073F;
+}
+
+#stand, #head, #hand1, #hand2, #foot1, #foot2, #body{
+    display: none;
+}
+
+.finalBlock{
+    margin: 10px;
+    border-bottom: 1px solid #950740;
+    color: #1a1a1d;
+}
+
+.test li{
+    background: red;
+    display: inline;
+    cursor: pointer;
+}
