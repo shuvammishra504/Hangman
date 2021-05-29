@@ -63,7 +63,6 @@ const ptag = document.querySelector('.ptag')
     //getting a random word
     let randomWordCalc = getRandomWord(0, words.length - 1);
     let randomWordValue = words[randomWordCalc];
-    console.log(randomWordValue)
 
     // splitting the letters
     let splitRandom = randomWordValue.split("");
