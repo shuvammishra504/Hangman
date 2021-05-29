@@ -75,7 +75,11 @@ section{
 .finalBlock{
     margin: 10px;
     border-bottom: 1px solid #950740;
-    color: #1a1a1d;
+    color: white;
+}
+
+.word-area span{
+    color: transparent;
 }
 
 .test li{
@@ -83,3 +87,4 @@ section{
     display: inline;
     cursor: pointer;
 }
+
