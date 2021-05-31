@@ -11,13 +11,14 @@ let letter8 = document.querySelector('.span8')
 let letter9 = document.querySelector('.span9')
 let letter10 = document.querySelector('.span10')
 
-const stand = document.getElementById('stand');
-const head = document.getElementById('head');
-const body = document.getElementById('body');
-const hand1 = document.getElementById('hand1');
-const hand2 = document.getElementById('hand2');
-const foot1 = document.getElementById('foot1');
-const foot2 = document.getElementById('foot2');
+const stand = document.querySelector('.stand')
+const head = document.querySelector('.head');
+const body = document.querySelector('.body');
+const hand1 = document.querySelector('.hand1');
+const hand2 = document.querySelector('.hand2');
+const foot1 = document.querySelector('.foot1');
+const foot2 = document.querySelector('.foot2');
+
 
 const a = document.querySelector('.a')
 const b = document.querySelector('.b')
@@ -51,7 +52,7 @@ const button = document.querySelector('.button')
 const ptag = document.querySelector('.ptag')
 
 
-    let words =['naphtha','awkward','abruptly', 'foxglove', 'lengths', 'subway', 'absurd', 'frazzled', 'lucky', 'swivel','abyss', 'frizzled', 'luxury', 'syndrome', 'affix', 'fuchsia', 'lymph', 'thriftless', 'askew', 'funny', 'marquis', 'thumbscrew', 'avenue', 'gabby', 'matrix', 'topaz', 'galaxy', 'megahertz', 'transcript', 'axiom', 'galvanize', 'microwave', 'transgress', 'azure', 'gazebo', 'mnemonic', 'transplant', 'bagpipes', 'giaour', 'mystify', 'triphthong', 'bandwagon', 'gizmo', 'twelfth', 'banjo', 'glowworms', 'nightclub', 'twelfths', 'bayou', 'glyph']
+    let words =['naphtha','awkward','abruptly', 'foxglove', 'lengths', 'subway', 'absurd', 'frazzled', 'lucky', 'swivel','abyss', 'frizzled', 'luxury', 'syndrome', 'affix', 'fuchsia', 'lymph', 'thriftless', 'askew', 'funny', 'marquis', 'thumbscrew', 'avenue', 'gabby', 'matrix', 'topaz', 'galaxy', 'megahertz', 'transcript', 'axiom', 'galvanize', 'microwave', 'transgress', 'azure', 'gazebo', 'mnemonic', 'transplant', 'bagpipes', 'giaour', 'mystify', 'triphthong', 'bandwagon', 'gizmo', 'twelfth', 'banjo', 'glowworms', 'nightclub', 'twelfths', 'bayou', 'glyph', 'nowadays', 'unknown', 'beekeeper', 'gnarly', 'numbskull', 'unworthy', 'bikini', 'gnostic', 'nymph', 'unzip', 'blitz', 'gossip', 'onyx', 'uptown', 'blizzard', 'grogginess', 'ovary', 'vaporize', 'boggle', 'haiku', 'oxidize', 'vixen', 'bookworm', 'haphazard', 'oxygen', 'vodka', 'boxcar', 'hyphen', 'pajama', 'voodoo', 'boxful', 'iatrogenic', 'peekaboo', 'vortex', 'buckaroo', 'icebox', 'phlegm', 'voyeurism', 'buffalo', 'injury', 'pixel', 'walkway', 'buffoon','ivory', 'pizazz', 'waltz', 'buxom', 'ivy', 'pneumonia', 'wave', 'buzzard', 'jackpot', 'polka', 'wavy', 'buzzing', 'jaundice', 'pshaw', 'waxy', 'buzzwords', 'jawbreaker', 'psyche', 'wellspring', 'caliph', 'jaywalk', 'puppy', 'wheezy', 'cobweb', 'jazziest', 'puzzling', 'whiskey', 'cockiness', 'jazzy', 'quartz', 'whizzing', 'croquet', 'jelly', 'queue', 'whomever', 'crypt', 'jigsaw', 'quips', 'wimpy', 'curacao', 'jinx', 'quixotic', 'witchcraft', 'cycle', 'jiujitsu', 'quiz', 'wizard', 'daiquiri', 'jockey', 'quizzes', 'woozy', 'dirndl', 'ogging', 'quorum', 'wristwatch', 'disavow', 'joking', 'razzmatazz', 'wyvern', 'dizzying', 'jovial', 'rhubarb', 'xylophone', 'duplex', 'joyful', 'rhythm', 'yachtsman', 'dwarves', 'juicy', 'rickshaw', 'yippee', 'embezzle', 'jukebox', 'schnapps', 'yoked', 'equip', 'jumbo', 'scratch', 'youthful', 'espionage', 'kayak', 'shiv', 'yummy', 'euouae', 'kazoo', 'snazzy', 'zephyr', 'exodus', 'keyhole', 'sphinx', 'zigzag', 'faking', 'khaki', 'spritz', 'zigzagging', 'fishhook', 'kilobyte', 'squawk', 'zilch', 'fixable', 'kiosk', 'staff', 'zipper', 'fjord', 'kitsch', 'strength', 'zodiac', 'flapjack', 'kiwifruit', 'strengths', 'zombie', 'flopping', 'klutz', 'stretch', 'fluffiness', 'knapsack', 'stronghold', 'flyby', 'larynx', 'stymied']
 
     // random words
     function getRandomWord(min, max){
@@ -63,6 +64,7 @@ const ptag = document.querySelector('.ptag')
     //getting a random word
     let randomWordCalc = getRandomWord(0, words.length - 1);
     let randomWordValue = words[randomWordCalc];
+    console.log(randomWordValue)
 
     // splitting the letters
     let splitRandom = randomWordValue.split("");
@@ -403,8 +405,20 @@ function checkLetter(){
                     a.style.border = "1px solid green";
                 }
                 }
-                else{
+                else if(stand.classList.contains('stand')){
                     a.style.border = "1px solid red";
+                    stand.classList.add('newStand');
+                    stand.classList.remove('stand');
+                }
+                else if(head.classList.contains('head')){
+                    a.style.border = "1px solid red"
+                    head.classList.add('newhead');
+                    head.classList.remove('head');
+                }
+                else if(body.classList.contains('body')){
+                    a.style.border = "1px solid red";
+                    body.classList.add('newBody');
+                    body.classList.remove('body');
                 }
             }
         function ClickB(){
@@ -585,7 +599,7 @@ function checkLetter(){
                 }
                 if(indexOfLetter == 5){
                     letter6.innerHTML = letter;
-                    letter6style.color = "white";
+                    letter6.style.color = "white";
                     b.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
@@ -653,8 +667,10 @@ function checkLetter(){
                     b.style.border = "1px solid green";
                 }
                 }
-                else{
+                else if(stand.classList.contains('stand')){
                     b.style.border = "1px solid red";
+                    stand.classList.add('newStand');
+                    stand.classList.remove('stand');
                 }
             }
         function ClickC(){
@@ -835,7 +851,7 @@ function checkLetter(){
                 }
                 if(indexOfLetter == 5){
                     letter6.innerHTML = letter;
-                    letter6style.color = "white";
+                    letter6.style.color = "white";
                     c.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
@@ -1085,7 +1101,7 @@ function checkLetter(){
                 }
                 if(indexOfLetter == 5){
                     letter6.innerHTML = letter;
-                    letter6style.color = "white";
+                    letter6.style.color = "white";
                     d.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
@@ -1335,7 +1351,7 @@ function checkLetter(){
                 }
                 if(indexOfLetter == 5){
                     letter6.innerHTML = letter;
-                    letter6style.color = "white";
+                    letter6.style.color = "white";
                     e.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
@@ -1585,7 +1601,7 @@ function checkLetter(){
                 }
                 if(indexOfLetter == 5){
                     letter6.innerHTML = letter;
-                    letter6style.color = "white";
+                    letter6.style.color = "white";
                     f.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
@@ -1835,7 +1851,7 @@ function checkLetter(){
                 }
                 if(indexOfLetter == 5){
                     letter6.innerHTML = letter;
-                    letter6style.color = "white";
+                    letter6.style.color = "white";
                     g.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
@@ -2085,7 +2101,7 @@ function checkLetter(){
                 }
                 if(indexOfLetter == 5){
                     letter6.innerHTML = letter;
-                    letter6style.color = "white";
+                    letter6.style.color = "white";
                     h.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
@@ -2335,7 +2351,7 @@ function checkLetter(){
                 }
                 if(indexOfLetter == 5){
                     letter6.innerHTML = letter;
-                    letter6style.color = "white";
+                    letter6.style.color = "white";
                     ibtn.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
@@ -2585,7 +2601,7 @@ function checkLetter(){
                 }
                 if(indexOfLetter == 5){
                     letter6.innerHTML = letter;
-                    letter6style.color = "white";
+                    letter6.style.color = "white";
                     j.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
@@ -2835,7 +2851,7 @@ function checkLetter(){
                 }
                 if(indexOfLetter == 5){
                     letter6.innerHTML = letter;
-                    letter6style.color = "white";
+                    letter6.style.color = "white";
                     k.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
@@ -3085,7 +3101,7 @@ function checkLetter(){
                 }
                 if(indexOfLetter == 5){
                     letter6.innerHTML = letter;
-                    letter6style.color = "white";
+                    letter6.style.color = "white";
                     l.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
@@ -3335,7 +3351,7 @@ function checkLetter(){
                 }
                 if(indexOfLetter == 5){
                     letter6.innerHTML = letter;
-                    letter6style.color = "white";
+                    letter6.style.color = "white";
                     m.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
@@ -6660,4 +6676,3 @@ function checkLetter(){
 }
 
 checkLetter();
-

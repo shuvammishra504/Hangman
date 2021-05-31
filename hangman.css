@@ -68,8 +68,16 @@ section{
     background: #C3073F;
 }
 
-#stand, #head, #hand1, #hand2, #foot1, #foot2, #body{
+.stand, .head, .hand1, .hand2, .foot1, .foot2, .body{
     display: none;
+}
+
+.newStand{
+    display: block;
+}
+
+.newHead{
+    display: block;
 }
 
 .finalBlock{
