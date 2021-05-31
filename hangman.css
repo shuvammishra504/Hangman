@@ -79,6 +79,29 @@ section{
 .newHead{
     display: block;
 }
+.newBody{
+    display: block;
+}
+
+.newHand1{
+    display: block;
+}
+
+.newFoot1{
+    display: block;
+}
+
+.newFoot2{
+    display: block;
+}
+
+.newA, .newB, .newC, .newD, .newE, .newF, .newG, .newH, .newI, .newJ, .newK, .newL, .newM, .newN, .newO, .newP, .newQ, .newR, .newS, .newT, .newU, .newV, .newW, .newX, .newY, .newZ{
+    pointer-events: none;
+}
+
+.greenA, .greenB, .greenC, .greenD, .greenE, .greenF, .greenG, .greenH, .greenI, .greenJ, .greenK, .greenL, .greenM, .greenN, .greenO, .greenP, .greenQ, .greenR, .greenS, .greenT, .greenU, .greenV, .greenW, .greenX, .greenY, .greenZ{
+    pointer-events: none;
+}
 
 .finalBlock{
     margin: 10px;
