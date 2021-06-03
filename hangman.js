@@ -1,3 +1,5 @@
+let gameSection = document.querySelector(".gameSection");
+
 const wordArea = document.querySelector('.word-area'); 
 
 let letter1 = document.querySelector('.span1')
@@ -51,7 +53,7 @@ const button = document.querySelector('.button')
 const ptag = document.querySelector('.ptag')
 
 
-    let words =['naphtha','awkward','abruptly', 'foxglove', 'lengths', 'subway', 'absurd', 'frazzled', 'lucky', 'swivel','abyss', 'frizzled', 'luxury', 'syndrome', 'affix', 'fuchsia', 'lymph', 'thriftless', 'askew', 'funny', 'marquis', 'thumbscrew', 'avenue', 'gabby', 'matrix', 'topaz', 'galaxy', 'megahertz', 'transcript', 'axiom', 'galvanize', 'microwave', 'transgress', 'azure', 'gazebo', 'mnemonic', 'transplant', 'bagpipes', 'giaour', 'mystify', 'triphthong', 'bandwagon', 'gizmo', 'twelfth', 'banjo', 'glowworms', 'nightclub', 'twelfths', 'bayou', 'glyph', 'nowadays', 'unknown', 'beekeeper', 'gnarly', 'numbskull', 'unworthy', 'gnostic',   'nymph', 'unzip', 'blitz', 'gossip', 'onyx', 'uptown', 'blizzard', 'grogginess', 'ovary', 'vaporize', 'boggle', 'haiku', 'oxidize', 'vixen', 'bookworm', 'haphazard', 'oxygen', 'vodka', 'boxcar', 'hyphen', 'pajama', 'voodoo', 'boxful', 'iatrogenic', 'peekaboo', 'vortex', 'buckaroo', 'icebox', 'phlegm', 'voyeurism', 'buffalo', 'injury', 'pixel', 'walkway', 'buffoon','ivory', 'pizazz', 'waltz', 'buxom', 'ivy', 'pneumonia', 'wave', 'buzzard', 'jackpot', 'polka', 'wavy', 'buzzing', 'jaundice', 'pshaw', 'waxy', 'buzzwords', 'jawbreaker', 'psyche', 'wellspring', 'caliph', 'jaywalk', 'puppy', 'wheezy', 'cobweb', 'jazziest', 'puzzling', 'whiskey', 'cockiness', 'jazzy', 'quartz', 'whizzing', 'croquet', 'jelly', 'queue', 'whomever', 'crypt', 'jigsaw', 'quips', 'wimpy', 'curacao', 'jinx', 'quixotic', 'witchcraft', 'cycle', 'jiujitsu', 'quiz', 'wizard', 'daiquiri', 'jockey', 'quizzes', 'woozy', 'dirndl', 'ogging', 'quorum', 'wristwatch', 'disavow', 'joking', 'razzmatazz', 'wyvern', 'dizzying', 'jovial', 'rhubarb', 'xylophone', 'duplex', 'joyful', 'rhythm', 'yachtsman', 'dwarves', 'juicy', 'rickshaw', 'yippee', 'embezzle', 'jukebox', 'schnapps', 'yoked', 'equip', 'jumbo', 'scratch', 'youthful', 'espionage', 'kayak', 'shiv', 'yummy', 'euouae', 'kazoo', 'snazzy', 'zephyr', 'exodus', 'keyhole', 'sphinx', 'zigzag', 'faking', 'khaki', 'spritz', 'zigzagging', 'fishhook', 'kilobyte', 'squawk', 'zilch', 'fixable', 'kiosk', 'staff', 'zipper', 'fjord', 'kitsch', 'strength', 'zodiac', 'flapjack', 'kiwifruit', 'strengths', 'zombie', 'flopping', 'klutz', 'stretch', 'fluffiness', 'knapsack', 'stronghold', 'flyby', 'larynx', 'stymied']
+    let words =['naphtha','awkward','abruptly', 'foxglove', 'lengths', 'subway', 'absurd', 'frazzled', 'lucky', 'swivel','abyss', 'frizzled', 'luxury', 'syndrome', 'affix', 'fuchsia', 'lymph', 'thriftless', 'askew', 'funny', 'marquis', 'thumbscrew', 'avenue', 'gabby', 'matrix', 'topaz', 'galaxy', 'megahertz', 'transcript', 'axiom', 'galvanize', 'microwave', 'transgress', 'azure', 'gazebo', 'mnemonic', 'transplant', 'bagpipes', 'giaour', 'mystify', 'triphthong', 'bandwagon', 'gizmo', 'twelfth', 'banjo', 'glowworms', 'nightclub', 'twelfths', 'bayou', 'glyph', 'nowadays', 'known', 'beekeeper', 'gnarly', 'numbskull', 'unworthy', 'gnostic',   'nymph', 'unzip', 'blitz', 'gossip', 'onyx', 'uptown', 'blizzard', 'grogginess', 'ovary', 'vaporize', 'boggle', 'haiku', 'oxidize', 'vixen', 'book', 'hazard', 'oxygen', 'vodka', 'boxcar', 'hyphen', 'boxful', 'iatrogenic', 'peekaboo', 'vortex', 'buckaroo', 'icebox', 'phlegm', 'voyeurism', 'buffalo', 'injury', 'pixel', 'walkway', 'buffoon','ivory', 'pizza', 'waltz', 'buxom', 'ivy', 'pneumonia', 'wave', 'buzzard', 'jackpot', 'polka', 'wavy', 'buzzing', 'jaundice', 'pshaw', 'waxy', 'buzzwords', 'jawbreaker', 'psyche', 'wellspring', 'caliph', 'jaywalk', 'wheezy', 'cobweb', 'jazziest', 'puzzling', 'whiskey', 'cockiness', 'jazzy', 'quartz', 'whizzing', 'croquet', 'jelly', 'queue', 'whomever', 'crypt', 'jigsaw', 'quips', 'wimpy', 'curacao', 'jinx', 'quixotic', 'witchcraft', 'cycle', 'jiujitsu', 'quiz', 'wizard', 'jockey', 'quizzes', 'woozy', 'dirndl', 'ogging', 'quorum', 'wristwatch', 'disavow', 'joking', 'wyvern', 'dizzying', 'jovial', 'rhubarb', 'xylophone', 'duplex', 'joyful', 'rhythm', 'yachtsman', 'dwarves', 'juicy', 'rickshaw', 'yippee', 'embezzle', 'jukebox', 'schnapps', 'yoked', 'equip', 'jumbo', 'scratch', 'youthful', 'espionage', 'kayak', 'shiv', 'yummy', 'euouae', 'kazoo', 'snazzy', 'zephyr', 'exodus', 'keyhole', 'sphinx', 'zigzag', 'faking', 'khaki', 'spritz', 'zigzag', 'fishhook', 'kilobyte', 'squawk', 'zilch', 'fixable', 'kiosk', 'staff', 'zipper', 'fjord', 'kitsch', 'strength', 'zodiac', 'flapjack', 'kiwifruit', 'strengths', 'zombie', 'flopping', 'klutz', 'stretch', 'fluffiness', 'knapsack', 'stronghold', 'flyby', 'larynx', 'stymied']
 
     // random words
     function getRandomWord(min, max){
@@ -69,6 +71,13 @@ const ptag = document.querySelector('.ptag')
     let splitRandom = randomWordValue.split("");
 
     let lengthOfWords = splitRandom.length;
+    console.log(lengthOfWords);
+    if(lengthOfWords ===4){
+        letter1.className = "finalBlock";
+        letter2.className = "finalBlock";
+        letter3.className = "finalBlock";
+        letter4.className = "finalBlock";
+    }
     if(lengthOfWords === 5){
         letter1.className = "finalBlock";
         letter2.className = "finalBlock";
@@ -127,9 +136,9 @@ const ptag = document.querySelector('.ptag')
         letter10.className = "finalBlock";
     }
 
-
     getRandomWord();
 
+    let correctLetters = 0;
 function checkLetter(){
     a.addEventListener('click', ClickA);
     b.addEventListener('click', ClickB);
@@ -158,6 +167,7 @@ function checkLetter(){
     y.addEventListener('click', ClickY);
     z.addEventListener('click', ClickZ);
 
+
         // checking if the letter is there
         function ClickA(){
             var letter = "a";
@@ -165,6 +175,8 @@ function checkLetter(){
                 a.classList.add('greenA');
                 let indexOfLetter = splitRandom.indexOf(letter);
                 if(indexOfLetter == 0){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter1.innerHTML = letter;
                     letter1.style.color = "white";
                     a.style.border = "1px solid green";
@@ -172,21 +184,29 @@ function checkLetter(){
                     let anotherIndex = splitRandom.indexOf(letter, 1);
                     console.log(anotherIndex)
                         if(anotherIndex == 1){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter2.innerHTML = letter;
                             letter2.style.color = "white";
                             letter2.setAttribute("right", "win");   
                         }
                         if(anotherIndex == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";    
                             letter3.setAttribute("right", "win");  
                         }
                         if(anotherIndex == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                             letter4.setAttribute("right", "win");      
                         }
                         if(anotherIndex == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                             letter5.setAttribute("right", "win");      
@@ -195,23 +215,33 @@ function checkLetter(){
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";    
                             letter6.setAttribute("right", "win");  
+                            correctLetters += 1;
+                            console.log(correctLetters)
                         }
                         if(anotherIndex == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";    
                             letter7.setAttribute("right", "win");  
                         }
                         if(anotherIndex == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                             letter8.setAttribute("right", "win");      
                         }
                         if(anotherIndex == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                             letter9.setAttribute("right", "win");      
                         }
                         if(anotherIndex == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";    
                             letter10.setAttribute("right", "win");  
@@ -219,207 +249,297 @@ function checkLetter(){
                     
                 }
                 if(indexOfLetter == 1){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter2.innerHTML = letter;
                     letter2.style.color = "white";
                     a.style.border = "1px solid green";
                     letter2.setAttribute("right", "win");  
                     let anotherIndex1 = splitRandom.indexOf(letter, 2);
                         if(anotherIndex1 == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";
                             letter3.setAttribute("right", "win");  
                         }
                         if(anotherIndex1 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                             letter4.setAttribute("right", "win");  
                         }
                         if(anotherIndex1 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                             letter5.setAttribute("right", "win");  
                         }
                         if(anotherIndex1 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                             letter6.setAttribute("right", "win");  
                         }
                         if(anotherIndex1 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                             letter7.setAttribute("right", "win");  
                         }
                         if(anotherIndex1 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                             letter8.setAttribute("right", "win");  
                         }
                         if(anotherIndex1 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                             letter9.setAttribute("right", "win");  
                         }
                         if(anotherIndex1 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                             letter10.setAttribute("right", "win");  
                         }
                 }
                 if(indexOfLetter == 2){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter3.innerHTML = letter;
                     letter3.style.color = "white";
                     a.style.border = "1px solid green";
                     let anotherIndex2 = splitRandom.indexOf(letter, 3);
                         if(anotherIndex2 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex2 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex2 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex2 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex2 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex2 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex2 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 3){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter4.innerHTML = letter;
                     letter4.style.color = "white";
                     a.style.border = "1px solid green";
                     let anotherIndex3 = splitRandom.indexOf(letter, 4);
                         if(anotherIndex3 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex3 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex3 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex3 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex3 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex3 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 4){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter5.innerHTML = letter;
                     letter5.style.color = "white";
                     a.style.border = "1px solid green";
                     let anotherIndex4 = splitRandom.indexOf(letter, 5);
                         if(anotherIndex4 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex4 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex4 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex4 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex4 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 5){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter6.innerHTML = letter;
                     letter6style.color = "white";
                     a.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex5 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex5 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex5 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 6){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter7.innerHTML = letter;
                     letter7.style.color = "white";
                     a.style.border = "1px solid green";
                     let anotherIndex6 = splitRandom.indexOf(letter, 7);
                         if(anotherIndex6 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex6 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex6 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 7){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter8.innerHTML = letter;
                     letter8.style.color = "white";
                     a.style.border = "1px solid green";
                      let anotherIndex7 = splitRandom.indexOf(letter, 8);
                         if(anotherIndex7 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex7 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 8){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter9.innerHTML = letter;
                     letter9.style.color = "white";
                     a.style.border = "1px solid green";
                     let anotherIndex8 = splitRandom.indexOf(letter, 9);
                     if(anotherIndex8 == 9){
+                        correctLetters += 1;
+                        console.log(correctLetters)
                         letter10.innerHTML = letter;
                         letter10.style.color = "white";
                     }
                 }
                 if(indexOfLetter == 9){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter10.innerHTML = letter;
                     letter10.style.color = "white";
                     a.style.border = "1px solid green";
@@ -474,242 +594,352 @@ function checkLetter(){
                 b.classList.add('greenB');
                 let indexOfLetter = splitRandom.indexOf(letter);
                 if(indexOfLetter == 0){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter1.innerHTML = letter;
                     letter1.style.color = "white";
                     b.style.border = "1px solid green";
                     let anotherIndex = splitRandom.indexOf(letter, 1);
                     console.log(anotherIndex)
                         if(anotherIndex == 1){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter2.innerHTML = letter;
                             letter2.style.color = "white";    
                         }
                         if(anotherIndex == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";    
                         }
                         if(anotherIndex == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";    
                         }
                         if(anotherIndex == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";    
                         }
                         if(anotherIndex == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";    
                         }
                         if(anotherIndex == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";    
                         }
                         if(anotherIndex == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";    
                         }
                         if(anotherIndex == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";    
                         }
                         if(anotherIndex == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";    
                         }
                     
                 }
                 if(indexOfLetter == 1){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter2.innerHTML = letter;
                     letter2.style.color = "white";
                     b.style.border = "1px solid green";
                     let anotherIndex1 = splitRandom.indexOf(letter, 2);
                         if(anotherIndex1 == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";
                         }
                         if(anotherIndex1 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex1 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex1 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex1 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex1 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex1 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex1 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 2){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter3.innerHTML = letter;
                     letter3.style.color = "white";
                     b.style.border = "1px solid green";
                     let anotherIndex2 = splitRandom.indexOf(letter, 3);
                         if(anotherIndex2 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex2 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex2 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex2 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex2 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex2 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex2 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 3){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter4.innerHTML = letter;
                     letter4.style.color = "white";
                     b.style.border = "1px solid green";
                     let anotherIndex3 = splitRandom.indexOf(letter, 4);
                         if(anotherIndex3 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex3 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex3 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex3 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex3 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex3 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 4){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter5.innerHTML = letter;
                     letter5.style.color = "white";
                     b.style.border = "1px solid green";
                     let anotherIndex4 = splitRandom.indexOf(letter, 5);
                         if(anotherIndex4 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex4 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex4 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex4 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex4 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 5){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter6.innerHTML = letter;
                     letter6.style.color = "white";
                     b.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex5 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex5 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex5 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 6){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter7.innerHTML = letter;
                     letter7.style.color = "white";
                     b.style.border = "1px solid green";
                     let anotherIndex6 = splitRandom.indexOf(letter, 7);
                         if(anotherIndex6 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex6 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex6 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 7){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter8.innerHTML = letter;
                     letter8.style.color = "white";
                     b.style.border = "1px solid green";
                      let anotherIndex7 = splitRandom.indexOf(letter, 8);
                         if(anotherIndex7 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex7 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 8){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter9.innerHTML = letter;
                     letter9.style.color = "white";
                     b.style.border = "1px solid green";
                     let anotherIndex8 = splitRandom.indexOf(letter, 9);
                     if(anotherIndex8 == 9){
+                        correctLetters += 1;
+                        console.log(correctLetters)
                         letter10.innerHTML = letter;
                         letter10.style.color = "white";
                     }
                 }
                 if(indexOfLetter == 9){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter10.innerHTML = letter;
                     letter10.style.color = "white";
                     b.style.border = "1px solid green";
@@ -764,242 +994,352 @@ function checkLetter(){
                 c.classList.add('greenC');
                 let indexOfLetter = splitRandom.indexOf(letter);
                 if(indexOfLetter == 0){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter1.innerHTML = letter;
                     letter1.style.color = "white";
                     c.style.border = "1px solid green";
                     let anotherIndex = splitRandom.indexOf(letter, 1);
                     console.log(anotherIndex)
                         if(anotherIndex == 1){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter2.innerHTML = letter;
                             letter2.style.color = "white";    
                         }
                         if(anotherIndex == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";    
                         }
                         if(anotherIndex == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";    
                         }
                         if(anotherIndex == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";    
                         }
                         if(anotherIndex == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";    
                         }
                         if(anotherIndex == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";    
                         }
                         if(anotherIndex == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";    
                         }
                         if(anotherIndex == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";    
                         }
                         if(anotherIndex == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";    
                         }
                     
                 }
                 if(indexOfLetter == 1){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter2.innerHTML = letter;
                     letter2.style.color = "white";
                     c.style.border = "1px solid green";
                     let anotherIndex1 = splitRandom.indexOf(letter, 2);
                         if(anotherIndex1 == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";
                         }
                         if(anotherIndex1 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex1 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex1 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex1 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex1 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex1 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex1 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 2){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter3.innerHTML = letter;
                     letter3.style.color = "white";
                     c.style.border = "1px solid green";
                     let anotherIndex2 = splitRandom.indexOf(letter, 3);
                         if(anotherIndex2 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex2 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex2 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex2 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex2 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex2 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex2 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 3){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter4.innerHTML = letter;
                     letter4.style.color = "white";
                     c.style.border = "1px solid green";
                     let anotherIndex3 = splitRandom.indexOf(letter, 4);
                         if(anotherIndex3 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex3 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex3 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex3 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex3 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex3 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 4){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter5.innerHTML = letter;
                     letter5.style.color = "white";
                     c.style.border = "1px solid green";
                     let anotherIndex4 = splitRandom.indexOf(letter, 5);
                         if(anotherIndex4 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex4 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex4 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex4 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex4 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 5){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter6.innerHTML = letter;
                     letter6.style.color = "white";
                     c.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex5 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex5 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex5 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 6){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter7.innerHTML = letter;
                     letter7.style.color = "white";
                     c.style.border = "1px solid green";
                     let anotherIndex6 = splitRandom.indexOf(letter, 7);
                         if(anotherIndex6 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex6 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex6 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 7){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter8.innerHTML = letter;
                     letter8.style.color = "white";
                     c.style.border = "1px solid green";
                      let anotherIndex7 = splitRandom.indexOf(letter, 8);
                         if(anotherIndex7 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex7 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 8){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter9.innerHTML = letter;
                     letter9.style.color = "white";
                     c.style.border = "1px solid green";
                     let anotherIndex8 = splitRandom.indexOf(letter, 9);
                     if(anotherIndex8 == 9){
+                        correctLetters += 1;
+                        console.log(correctLetters)
                         letter10.innerHTML = letter;
                         letter10.style.color = "white";
                     }
                 }
                 if(indexOfLetter == 9){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter10.innerHTML = letter;
                     letter10.style.color = "white";
                     c.style.border = "1px solid green";
@@ -1054,242 +1394,352 @@ function checkLetter(){
                 d.classList.add('greenD');
                 let indexOfLetter = splitRandom.indexOf(letter);
                 if(indexOfLetter == 0){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter1.innerHTML = letter;
                     letter1.style.color = "white";
                     d.style.border = "1px solid green";
                     let anotherIndex = splitRandom.indexOf(letter, 1);
                     console.log(anotherIndex)
                         if(anotherIndex == 1){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter2.innerHTML = letter;
                             letter2.style.color = "white";    
                         }
                         if(anotherIndex == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";    
                         }
                         if(anotherIndex == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";    
                         }
                         if(anotherIndex == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";    
                         }
                         if(anotherIndex == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";    
                         }
                         if(anotherIndex == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";    
                         }
                         if(anotherIndex == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";    
                         }
                         if(anotherIndex == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";    
                         }
                         if(anotherIndex == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";    
                         }
                     
                 }
                 if(indexOfLetter == 1){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter2.innerHTML = letter;
                     letter2.style.color = "white";
                     d.style.border = "1px solid green";
                     let anotherIndex1 = splitRandom.indexOf(letter, 2);
                         if(anotherIndex1 == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";
                         }
                         if(anotherIndex1 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex1 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex1 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex1 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex1 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex1 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex1 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 2){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter3.innerHTML = letter;
                     letter3.style.color = "white";
                     d.style.border = "1px solid green";
                     let anotherIndex2 = splitRandom.indexOf(letter, 3);
                         if(anotherIndex2 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex2 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex2 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex2 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex2 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex2 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex2 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 3){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter4.innerHTML = letter;
                     letter4.style.color = "white";
                     d.style.border = "1px solid green";
                     let anotherIndex3 = splitRandom.indexOf(letter, 4);
                         if(anotherIndex3 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex3 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex3 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex3 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex3 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex3 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 4){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter5.innerHTML = letter;
                     letter5.style.color = "white";
                     d.style.border = "1px solid green";
                     let anotherIndex4 = splitRandom.indexOf(letter, 5);
                         if(anotherIndex4 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex4 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex4 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex4 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex4 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 5){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter6.innerHTML = letter;
                     letter6.style.color = "white";
                     d.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex5 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex5 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex5 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 6){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter7.innerHTML = letter;
                     letter7.style.color = "white";
                     d.style.border = "1px solid green";
                     let anotherIndex6 = splitRandom.indexOf(letter, 7);
                         if(anotherIndex6 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex6 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex6 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 7){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter8.innerHTML = letter;
                     letter8.style.color = "white";
                     d.style.border = "1px solid green";
                      let anotherIndex7 = splitRandom.indexOf(letter, 8);
                         if(anotherIndex7 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex7 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 8){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter9.innerHTML = letter;
                     letter9.style.color = "white";
                     d.style.border = "1px solid green";
                     let anotherIndex8 = splitRandom.indexOf(letter, 9);
                     if(anotherIndex8 == 9){
+                        correctLetters += 1;
+                        console.log(correctLetters)
                         letter10.innerHTML = letter;
                         letter10.style.color = "white";
                     }
                 }
                 if(indexOfLetter == 9){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter10.innerHTML = letter;
                     letter10.style.color = "white";
                     d.style.border = "1px solid green";
@@ -1344,242 +1794,352 @@ function checkLetter(){
                 e.classList.add('greenE');
                 let indexOfLetter = splitRandom.indexOf(letter);
                 if(indexOfLetter == 0){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter1.innerHTML = letter;
                     letter1.style.color = "white";
                     e.style.border = "1px solid green";
                     let anotherIndex = splitRandom.indexOf(letter, 1);
                     console.log(anotherIndex)
                         if(anotherIndex == 1){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter2.innerHTML = letter;
                             letter2.style.color = "white";    
                         }
                         if(anotherIndex == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";    
                         }
                         if(anotherIndex == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";    
                         }
                         if(anotherIndex == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";    
                         }
                         if(anotherIndex == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";    
                         }
                         if(anotherIndex == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";    
                         }
                         if(anotherIndex == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";    
                         }
                         if(anotherIndex == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";    
                         }
                         if(anotherIndex == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";    
                         }
                     
                 }
                 if(indexOfLetter == 1){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter2.innerHTML = letter;
                     letter2.style.color = "white";
                     e.style.border = "1px solid green";
                     let anotherIndex1 = splitRandom.indexOf(letter, 2);
                         if(anotherIndex1 == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";
                         }
                         if(anotherIndex1 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex1 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex1 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex1 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex1 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex1 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex1 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 2){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter3.innerHTML = letter;
                     letter3.style.color = "white";
                     e.style.border = "1px solid green";
                     let anotherIndex2 = splitRandom.indexOf(letter, 3);
                         if(anotherIndex2 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex2 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex2 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex2 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex2 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex2 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex2 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 3){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter4.innerHTML = letter;
                     letter4.style.color = "white";
                     e.style.border = "1px solid green";
                     let anotherIndex3 = splitRandom.indexOf(letter, 4);
                         if(anotherIndex3 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex3 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex3 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex3 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex3 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex3 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 4){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter5.innerHTML = letter;
                     letter5.style.color = "white";
                     e.style.border = "1px solid green";
                     let anotherIndex4 = splitRandom.indexOf(letter, 5);
                         if(anotherIndex4 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex4 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex4 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex4 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex4 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 5){
+                    correctLetters += 1;
+                            console.log(correctLetters)
                     letter6.innerHTML = letter;
                     letter6.style.color = "white";
                     e.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex5 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex5 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex5 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 6){
+                    correctLetters += 1;
+                            console.log(correctLetters)
                     letter7.innerHTML = letter;
                     letter7.style.color = "white";
                     e.style.border = "1px solid green";
                     let anotherIndex6 = splitRandom.indexOf(letter, 7);
                         if(anotherIndex6 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex6 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex6 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 7){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter8.innerHTML = letter;
                     letter8.style.color = "white";
                     e.style.border = "1px solid green";
                      let anotherIndex7 = splitRandom.indexOf(letter, 8);
                         if(anotherIndex7 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex7 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 8){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter9.innerHTML = letter;
                     letter9.style.color = "white";
                     e.style.border = "1px solid green";
                     let anotherIndex8 = splitRandom.indexOf(letter, 9);
                     if(anotherIndex8 == 9){
+                        correctLetters += 1;
+                        console.log(correctLetters)
                         letter10.innerHTML = letter;
                         letter10.style.color = "white";
                     }
                 }
                 if(indexOfLetter == 9){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter10.innerHTML = letter;
                     letter10.style.color = "white";
                     e.style.border = "1px solid green";
@@ -1634,242 +2194,352 @@ function checkLetter(){
                 f.classList.add('greenF');
                 let indexOfLetter = splitRandom.indexOf(letter);
                 if(indexOfLetter == 0){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter1.innerHTML = letter;
                     letter1.style.color = "white";
                     f.style.border = "1px solid green";
                     let anotherIndex = splitRandom.indexOf(letter, 1);
                     console.log(anotherIndex)
                         if(anotherIndex == 1){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter2.innerHTML = letter;
                             letter2.style.color = "white";    
                         }
                         if(anotherIndex == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";    
                         }
                         if(anotherIndex == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";    
                         }
                         if(anotherIndex == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";    
                         }
                         if(anotherIndex == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";    
                         }
                         if(anotherIndex == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";    
                         }
                         if(anotherIndex == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";    
                         }
                         if(anotherIndex == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";    
                         }
                         if(anotherIndex == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";    
                         }
                     
                 }
                 if(indexOfLetter == 1){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter2.innerHTML = letter;
                     letter2.style.color = "white";
                     f.style.border = "1px solid green";
                     let anotherIndex1 = splitRandom.indexOf(letter, 2);
                         if(anotherIndex1 == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";
                         }
                         if(anotherIndex1 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex1 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex1 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex1 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex1 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex1 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex1 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 2){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter3.innerHTML = letter;
                     letter3.style.color = "white";
                     f.style.border = "1px solid green";
                     let anotherIndex2 = splitRandom.indexOf(letter, 3);
                         if(anotherIndex2 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex2 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex2 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex2 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex2 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex2 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex2 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 3){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter4.innerHTML = letter;
                     letter4.style.color = "white";
                     f.style.border = "1px solid green";
                     let anotherIndex3 = splitRandom.indexOf(letter, 4);
                         if(anotherIndex3 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex3 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex3 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex3 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex3 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex3 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 4){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter5.innerHTML = letter;
                     letter5.style.color = "white";
                     f.style.border = "1px solid green";
                     let anotherIndex4 = splitRandom.indexOf(letter, 5);
                         if(anotherIndex4 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex4 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex4 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex4 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex4 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 5){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter6.innerHTML = letter;
                     letter6.style.color = "white";
                     f.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex5 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex5 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex5 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 6){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter7.innerHTML = letter;
                     letter7.style.color = "white";
                     f.style.border = "1px solid green";
                     let anotherIndex6 = splitRandom.indexOf(letter, 7);
                         if(anotherIndex6 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex6 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex6 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 7){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter8.innerHTML = letter;
                     letter8.style.color = "white";
                     f.style.border = "1px solid green";
                      let anotherIndex7 = splitRandom.indexOf(letter, 8);
                         if(anotherIndex7 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex7 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 8){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter9.innerHTML = letter;
                     letter9.style.color = "white";
                     f.style.border = "1px solid green";
                     let anotherIndex8 = splitRandom.indexOf(letter, 9);
                     if(anotherIndex8 == 9){
+                        correctLetters += 1;
+                        console.log(correctLetters)
                         letter10.innerHTML = letter;
                         letter10.style.color = "white";
                     }
                 }
                 if(indexOfLetter == 9){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter10.innerHTML = letter;
                     letter10.style.color = "white";
                     f.style.border = "1px solid green";
@@ -1924,242 +2594,352 @@ function checkLetter(){
                 g.classList.add('greenG');
                 let indexOfLetter = splitRandom.indexOf(letter);
                 if(indexOfLetter == 0){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter1.innerHTML = letter;
                     letter1.style.color = "white";
                     g.style.border = "1px solid green";
                     let anotherIndex = splitRandom.indexOf(letter, 1);
                     console.log(anotherIndex)
                         if(anotherIndex == 1){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter2.innerHTML = letter;
                             letter2.style.color = "white";    
                         }
                         if(anotherIndex == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";    
                         }
                         if(anotherIndex == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";    
                         }
                         if(anotherIndex == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";    
                         }
                         if(anotherIndex == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";    
                         }
                         if(anotherIndex == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";    
                         }
                         if(anotherIndex == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";    
                         }
                         if(anotherIndex == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";    
                         }
                         if(anotherIndex == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";    
                         }
                     
                 }
                 if(indexOfLetter == 1){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter2.innerHTML = letter;
                     letter2.style.color = "white";
                     g.style.border = "1px solid green";
                     let anotherIndex1 = splitRandom.indexOf(letter, 2);
                         if(anotherIndex1 == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";
                         }
                         if(anotherIndex1 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex1 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex1 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex1 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex1 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex1 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex1 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 2){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter3.innerHTML = letter;
                     letter3.style.color = "white";
                     g.style.border = "1px solid green";
                     let anotherIndex2 = splitRandom.indexOf(letter, 3);
                         if(anotherIndex2 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex2 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex2 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex2 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex2 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex2 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex2 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 3){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter4.innerHTML = letter;
                     letter4.style.color = "white";
                     g.style.border = "1px solid green";
                     let anotherIndex3 = splitRandom.indexOf(letter, 4);
                         if(anotherIndex3 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex3 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex3 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex3 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex3 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex3 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 4){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter5.innerHTML = letter;
                     letter5.style.color = "white";
                     g.style.border = "1px solid green";
                     let anotherIndex4 = splitRandom.indexOf(letter, 5);
                         if(anotherIndex4 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex4 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex4 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex4 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex4 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 5){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter6.innerHTML = letter;
                     letter6.style.color = "white";
                     g.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex5 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex5 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex5 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 6){
+                    correctLetters += 1;
+                            console.log(correctLetters)
                     letter7.innerHTML = letter;
                     letter7.style.color = "white";
                     g.style.border = "1px solid green";
                     let anotherIndex6 = splitRandom.indexOf(letter, 7);
                         if(anotherIndex6 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex6 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex6 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 7){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter8.innerHTML = letter;
                     letter8.style.color = "white";
                     g.style.border = "1px solid green";
                      let anotherIndex7 = splitRandom.indexOf(letter, 8);
                         if(anotherIndex7 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex7 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 8){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter9.innerHTML = letter;
                     letter9.style.color = "white";
                     g.style.border = "1px solid green";
                     let anotherIndex8 = splitRandom.indexOf(letter, 9);
                     if(anotherIndex8 == 9){
+                        correctLetters += 1;
+                        console.log(correctLetters)
                         letter10.innerHTML = letter;
                         letter10.style.color = "white";
                     }
                 }
                 if(indexOfLetter == 9){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter10.innerHTML = letter;
                     letter10.style.color = "white";
                     g.style.border = "1px solid green";
@@ -2214,242 +2994,352 @@ function checkLetter(){
                 h.classList.add('greenH');
                 let indexOfLetter = splitRandom.indexOf(letter);
                 if(indexOfLetter == 0){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter1.innerHTML = letter;
                     letter1.style.color = "white";
                     h.style.border = "1px solid green";
                     let anotherIndex = splitRandom.indexOf(letter, 1);
                     console.log(anotherIndex)
                         if(anotherIndex == 1){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter2.innerHTML = letter;
                             letter2.style.color = "white";    
                         }
                         if(anotherIndex == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";    
                         }
                         if(anotherIndex == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";    
                         }
                         if(anotherIndex == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";    
                         }
                         if(anotherIndex == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";    
                         }
                         if(anotherIndex == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";    
                         }
                         if(anotherIndex == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";    
                         }
                         if(anotherIndex == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";    
                         }
                         if(anotherIndex == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";    
                         }
                     
                 }
                 if(indexOfLetter == 1){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter2.innerHTML = letter;
                     letter2.style.color = "white";
                     h.style.border = "1px solid green";
                     let anotherIndex1 = splitRandom.indexOf(letter, 2);
                         if(anotherIndex1 == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";
                         }
                         if(anotherIndex1 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex1 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex1 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex1 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex1 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex1 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex1 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 2){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter3.innerHTML = letter;
                     letter3.style.color = "white";
                     h.style.border = "1px solid green";
                     let anotherIndex2 = splitRandom.indexOf(letter, 3);
                         if(anotherIndex2 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex2 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex2 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex2 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex2 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex2 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex2 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 3){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter4.innerHTML = letter;
                     letter4.style.color = "white";
                     h.style.border = "1px solid green";
                     let anotherIndex3 = splitRandom.indexOf(letter, 4);
                         if(anotherIndex3 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex3 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex3 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex3 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex3 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex3 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 4){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter5.innerHTML = letter;
                     letter5.style.color = "white";
                     h.style.border = "1px solid green";
                     let anotherIndex4 = splitRandom.indexOf(letter, 5);
                         if(anotherIndex4 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex4 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex4 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex4 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex4 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 5){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter6.innerHTML = letter;
                     letter6.style.color = "white";
                     h.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex5 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex5 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex5 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 6){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter7.innerHTML = letter;
                     letter7.style.color = "white";
                     h.style.border = "1px solid green";
                     let anotherIndex6 = splitRandom.indexOf(letter, 7);
                         if(anotherIndex6 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex6 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex6 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 7){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter8.innerHTML = letter;
                     letter8.style.color = "white";
                     h.style.border = "1px solid green";
                      let anotherIndex7 = splitRandom.indexOf(letter, 8);
                         if(anotherIndex7 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex7 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 8){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter9.innerHTML = letter;
                     letter9.style.color = "white";
                     h.style.border = "1px solid green";
                     let anotherIndex8 = splitRandom.indexOf(letter, 9);
                     if(anotherIndex8 == 9){
+                        correctLetters += 1;
+                        console.log(correctLetters)
                         letter10.innerHTML = letter;
                         letter10.style.color = "white";
                     }
                 }
                 if(indexOfLetter == 9){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter10.innerHTML = letter;
                     letter10.style.color = "white";
                     h.style.border = "1px solid green";
@@ -2504,242 +3394,352 @@ function checkLetter(){
                 ibtn.classList.add('greenI');
                 let indexOfLetter = splitRandom.indexOf(letter);
                 if(indexOfLetter == 0){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter1.innerHTML = letter;
                     letter1.style.color = "white";
                     ibtn.style.border = "1px solid green";
                     let anotherIndex = splitRandom.indexOf(letter, 1);
                     console.log(anotherIndex)
                         if(anotherIndex == 1){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter2.innerHTML = letter;
                             letter2.style.color = "white";    
                         }
                         if(anotherIndex == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";    
                         }
                         if(anotherIndex == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";    
                         }
                         if(anotherIndex == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";    
                         }
                         if(anotherIndex == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";    
                         }
                         if(anotherIndex == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";    
                         }
                         if(anotherIndex == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";    
                         }
                         if(anotherIndex == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";    
                         }
                         if(anotherIndex == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";    
                         }
                     
                 }
                 if(indexOfLetter == 1){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter2.innerHTML = letter;
                     letter2.style.color = "white";
                     ibtn.style.border = "1px solid green";
                     let anotherIndex1 = splitRandom.indexOf(letter, 2);
                         if(anotherIndex1 == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";
                         }
                         if(anotherIndex1 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex1 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex1 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex1 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex1 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex1 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex1 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 2){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter3.innerHTML = letter;
                     letter3.style.color = "white";
                     ibtn.style.border = "1px solid green";
                     let anotherIndex2 = splitRandom.indexOf(letter, 3);
                         if(anotherIndex2 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex2 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex2 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex2 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex2 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex2 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex2 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 3){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter4.innerHTML = letter;
                     letter4.style.color = "white";
                     ibtn.style.border = "1px solid green";
                     let anotherIndex3 = splitRandom.indexOf(letter, 4);
                         if(anotherIndex3 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex3 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex3 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex3 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex3 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex3 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 4){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter5.innerHTML = letter;
                     letter5.style.color = "white";
                     ibtn.style.border = "1px solid green";
                     let anotherIndex4 = splitRandom.indexOf(letter, 5);
                         if(anotherIndex4 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex4 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex4 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex4 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex4 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 5){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter6.innerHTML = letter;
                     letter6.style.color = "white";
                     ibtn.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex5 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex5 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex5 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 6){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter7.innerHTML = letter;
                     letter7.style.color = "white";
                     ibtn.style.border = "1px solid green";
                     let anotherIndex6 = splitRandom.indexOf(letter, 7);
                         if(anotherIndex6 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex6 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex6 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 7){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter8.innerHTML = letter;
                     letter8.style.color = "white";
                     ibtn.style.border = "1px solid green";
                      let anotherIndex7 = splitRandom.indexOf(letter, 8);
                         if(anotherIndex7 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex7 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 8){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter9.innerHTML = letter;
                     letter9.style.color = "white";
                     ibtn.style.border = "1px solid green";
                     let anotherIndex8 = splitRandom.indexOf(letter, 9);
-                    if(anotherIndex8 == 9){
-                        letter10.innerHTML = letter;
-                        letter10.style.color = "white";
-                    }
+                        if(anotherIndex8 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
+                            letter10.innerHTML = letter;
+                            letter10.style.color = "white";
+                        }
                 }
                 if(indexOfLetter == 9){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter10.innerHTML = letter;
                     letter10.style.color = "white";
                     ibtn.style.border = "1px solid green";
@@ -2794,242 +3794,352 @@ function checkLetter(){
                 j.classList.add('greenJ');
                 let indexOfLetter = splitRandom.indexOf(letter);
                 if(indexOfLetter == 0){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter1.innerHTML = letter;
                     letter1.style.color = "white";
                     j.style.border = "1px solid green";
                     let anotherIndex = splitRandom.indexOf(letter, 1);
                     console.log(anotherIndex)
                         if(anotherIndex == 1){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter2.innerHTML = letter;
                             letter2.style.color = "white";    
                         }
                         if(anotherIndex == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";    
                         }
                         if(anotherIndex == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";    
                         }
                         if(anotherIndex == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";    
                         }
                         if(anotherIndex == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";    
                         }
                         if(anotherIndex == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";    
                         }
                         if(anotherIndex == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";    
                         }
                         if(anotherIndex == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";    
                         }
                         if(anotherIndex == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";    
                         }
                     
                 }
                 if(indexOfLetter == 1){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter2.innerHTML = letter;
                     letter2.style.color = "white";
                     j.style.border = "1px solid green";
                     let anotherIndex1 = splitRandom.indexOf(letter, 2);
                         if(anotherIndex1 == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";
                         }
                         if(anotherIndex1 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex1 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex1 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex1 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex1 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex1 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex1 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 2){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter3.innerHTML = letter;
                     letter3.style.color = "white";
                     j.style.border = "1px solid green";
                     let anotherIndex2 = splitRandom.indexOf(letter, 3);
                         if(anotherIndex2 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex2 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex2 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex2 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex2 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex2 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex2 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 3){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter4.innerHTML = letter;
                     letter4.style.color = "white";
                     j.style.border = "1px solid green";
                     let anotherIndex3 = splitRandom.indexOf(letter, 4);
                         if(anotherIndex3 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex3 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex3 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex3 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex3 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex3 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 4){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter5.innerHTML = letter;
                     letter5.style.color = "white";
                     j.style.border = "1px solid green";
                     let anotherIndex4 = splitRandom.indexOf(letter, 5);
                         if(anotherIndex4 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex4 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex4 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex4 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex4 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 5){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter6.innerHTML = letter;
                     letter6.style.color = "white";
                     j.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex5 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex5 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex5 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 6){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter7.innerHTML = letter;
                     letter7.style.color = "white";
                     j.style.border = "1px solid green";
                     let anotherIndex6 = splitRandom.indexOf(letter, 7);
                         if(anotherIndex6 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex6 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex6 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 7){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter8.innerHTML = letter;
                     letter8.style.color = "white";
                     j.style.border = "1px solid green";
                      let anotherIndex7 = splitRandom.indexOf(letter, 8);
                         if(anotherIndex7 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex7 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 8){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter9.innerHTML = letter;
                     letter9.style.color = "white";
                     j.style.border = "1px solid green";
                     let anotherIndex8 = splitRandom.indexOf(letter, 9);
-                    if(anotherIndex8 == 9){
-                        letter10.innerHTML = letter;
-                        letter10.style.color = "white";
-                    }
+                        if(anotherIndex8 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
+                            letter10.innerHTML = letter;
+                            letter10.style.color = "white";
+                        }
                 }
                 if(indexOfLetter == 9){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter10.innerHTML = letter;
                     letter10.style.color = "white";
                     j.style.border = "1px solid green";
@@ -3084,242 +4194,352 @@ function checkLetter(){
                 k.classList.add('greenK');
                 let indexOfLetter = splitRandom.indexOf(letter);
                 if(indexOfLetter == 0){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter1.innerHTML = letter;
                     letter1.style.color = "white";
                     k.style.border = "1px solid green";
                     let anotherIndex = splitRandom.indexOf(letter, 1);
                     console.log(anotherIndex)
                         if(anotherIndex == 1){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter2.innerHTML = letter;
                             letter2.style.color = "white";    
                         }
                         if(anotherIndex == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";    
                         }
                         if(anotherIndex == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";    
                         }
                         if(anotherIndex == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";    
                         }
                         if(anotherIndex == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";    
                         }
                         if(anotherIndex == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";    
                         }
                         if(anotherIndex == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";    
                         }
                         if(anotherIndex == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";    
                         }
                         if(anotherIndex == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";    
                         }
                     
                 }
                 if(indexOfLetter == 1){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter2.innerHTML = letter;
                     letter2.style.color = "white";
                     k.style.border = "1px solid green";
                     let anotherIndex1 = splitRandom.indexOf(letter, 2);
                         if(anotherIndex1 == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";
                         }
                         if(anotherIndex1 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex1 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex1 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex1 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex1 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex1 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex1 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 2){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter3.innerHTML = letter;
                     letter3.style.color = "white";
                     k.style.border = "1px solid green";
                     let anotherIndex2 = splitRandom.indexOf(letter, 3);
                         if(anotherIndex2 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex2 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex2 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex2 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex2 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex2 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex2 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 3){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter4.innerHTML = letter;
                     letter4.style.color = "white";
                     k.style.border = "1px solid green";
                     let anotherIndex3 = splitRandom.indexOf(letter, 4);
                         if(anotherIndex3 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex3 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex3 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex3 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex3 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex3 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 4){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter5.innerHTML = letter;
                     letter5.style.color = "white";
                     k.style.border = "1px solid green";
                     let anotherIndex4 = splitRandom.indexOf(letter, 5);
                         if(anotherIndex4 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex4 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex4 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex4 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex4 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 5){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter6.innerHTML = letter;
                     letter6.style.color = "white";
                     k.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex5 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex5 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex5 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 6){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter7.innerHTML = letter;
                     letter7.style.color = "white";
                     k.style.border = "1px solid green";
                     let anotherIndex6 = splitRandom.indexOf(letter, 7);
                         if(anotherIndex6 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex6 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex6 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 7){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter8.innerHTML = letter;
                     letter8.style.color = "white";
                     k.style.border = "1px solid green";
                      let anotherIndex7 = splitRandom.indexOf(letter, 8);
                         if(anotherIndex7 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex7 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 8){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter9.innerHTML = letter;
                     letter9.style.color = "white";
                     k.style.border = "1px solid green";
                     let anotherIndex8 = splitRandom.indexOf(letter, 9);
-                    if(anotherIndex8 == 9){
-                        letter10.innerHTML = letter;
-                        letter10.style.color = "white";
-                    }
+                        if(anotherIndex8 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
+                            letter10.innerHTML = letter;
+                            letter10.style.color = "white";
+                        }
                 }
                 if(indexOfLetter == 9){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter10.innerHTML = letter;
                     letter10.style.color = "white";
                     k.style.border = "1px solid green";
@@ -3374,242 +4594,352 @@ function checkLetter(){
                 l.classList.add('greenL');
                 let indexOfLetter = splitRandom.indexOf(letter);
                 if(indexOfLetter == 0){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter1.innerHTML = letter;
                     letter1.style.color = "white";
                     l.style.border = "1px solid green";
                     let anotherIndex = splitRandom.indexOf(letter, 1);
                     console.log(anotherIndex)
                         if(anotherIndex == 1){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter2.innerHTML = letter;
                             letter2.style.color = "white";    
                         }
                         if(anotherIndex == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";    
                         }
                         if(anotherIndex == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";    
                         }
                         if(anotherIndex == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";    
                         }
                         if(anotherIndex == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";    
                         }
                         if(anotherIndex == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";    
                         }
                         if(anotherIndex == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";    
                         }
                         if(anotherIndex == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";    
                         }
                         if(anotherIndex == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";    
                         }
                     
                 }
                 if(indexOfLetter == 1){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter2.innerHTML = letter;
                     letter2.style.color = "white";
                     l.style.border = "1px solid green";
                     let anotherIndex1 = splitRandom.indexOf(letter, 2);
                         if(anotherIndex1 == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";
                         }
                         if(anotherIndex1 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex1 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex1 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex1 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex1 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex1 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex1 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 2){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter3.innerHTML = letter;
                     letter3.style.color = "white";
                     l.style.border = "1px solid green";
                     let anotherIndex2 = splitRandom.indexOf(letter, 3);
                         if(anotherIndex2 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex2 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex2 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex2 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex2 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex2 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex2 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 3){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter4.innerHTML = letter;
                     letter4.style.color = "white";
                     l.style.border = "1px solid green";
                     let anotherIndex3 = splitRandom.indexOf(letter, 4);
                         if(anotherIndex3 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex3 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex3 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex3 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex3 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex3 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 4){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter5.innerHTML = letter;
                     letter5.style.color = "white";
                     l.style.border = "1px solid green";
                     let anotherIndex4 = splitRandom.indexOf(letter, 5);
                         if(anotherIndex4 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex4 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex4 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex4 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex4 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 5){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter6.innerHTML = letter;
                     letter6.style.color = "white";
                     l.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex5 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex5 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex5 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 6){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter7.innerHTML = letter;
                     letter7.style.color = "white";
                     l.style.border = "1px solid green";
                     let anotherIndex6 = splitRandom.indexOf(letter, 7);
                         if(anotherIndex6 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex6 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex6 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 7){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter8.innerHTML = letter;
                     letter8.style.color = "white";
                     l.style.border = "1px solid green";
                      let anotherIndex7 = splitRandom.indexOf(letter, 8);
                         if(anotherIndex7 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex7 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 8){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter9.innerHTML = letter;
                     letter9.style.color = "white";
                     l.style.border = "1px solid green";
                     let anotherIndex8 = splitRandom.indexOf(letter, 9);
-                    if(anotherIndex8 == 9){
-                        letter10.innerHTML = letter;
-                        letter10.style.color = "white";
-                    }
+                        if(anotherIndex8 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
+                            letter10.innerHTML = letter;
+                            letter10.style.color = "white";
+                        }
                 }
                 if(indexOfLetter == 9){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter10.innerHTML = letter;
                     letter10.style.color = "white";
                     l.style.border = "1px solid green";
@@ -3664,242 +4994,352 @@ function checkLetter(){
                 m.classList.add('greenM');
                 let indexOfLetter = splitRandom.indexOf(letter);
                 if(indexOfLetter == 0){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter1.innerHTML = letter;
                     letter1.style.color = "white";
                     m.style.border = "1px solid green";
                     let anotherIndex = splitRandom.indexOf(letter, 1);
                     console.log(anotherIndex)
                         if(anotherIndex == 1){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter2.innerHTML = letter;
                             letter2.style.color = "white";    
                         }
                         if(anotherIndex == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";    
                         }
                         if(anotherIndex == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";    
                         }
                         if(anotherIndex == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";    
                         }
                         if(anotherIndex == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";    
                         }
                         if(anotherIndex == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";    
                         }
                         if(anotherIndex == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";    
                         }
                         if(anotherIndex == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";    
                         }
                         if(anotherIndex == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";    
                         }
                     
                 }
                 if(indexOfLetter == 1){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter2.innerHTML = letter;
                     letter2.style.color = "white";
                     m.style.border = "1px solid green";
                     let anotherIndex1 = splitRandom.indexOf(letter, 2);
                         if(anotherIndex1 == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";
                         }
                         if(anotherIndex1 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex1 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex1 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex1 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex1 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex1 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex1 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 2){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter3.innerHTML = letter;
                     letter3.style.color = "white";
                     m.style.border = "1px solid green";
                     let anotherIndex2 = splitRandom.indexOf(letter, 3);
                         if(anotherIndex2 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex2 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex2 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex2 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex2 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex2 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex2 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 3){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter4.innerHTML = letter;
                     letter4.style.color = "white";
                     m.style.border = "1px solid green";
                     let anotherIndex3 = splitRandom.indexOf(letter, 4);
                         if(anotherIndex3 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex3 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex3 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex3 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex3 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex3 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 4){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter5.innerHTML = letter;
                     letter5.style.color = "white";
                     m.style.border = "1px solid green";
                     let anotherIndex4 = splitRandom.indexOf(letter, 5);
                         if(anotherIndex4 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex4 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex4 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex4 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex4 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 5){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter6.innerHTML = letter;
                     letter6.style.color = "white";
                     m.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex5 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex5 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex5 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 6){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter7.innerHTML = letter;
                     letter7.style.color = "white";
                     m.style.border = "1px solid green";
                     let anotherIndex6 = splitRandom.indexOf(letter, 7);
                         if(anotherIndex6 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex6 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex6 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 7){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter8.innerHTML = letter;
                     letter8.style.color = "white";
                     m.style.border = "1px solid green";
                      let anotherIndex7 = splitRandom.indexOf(letter, 8);
                         if(anotherIndex7 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex7 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 8){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter9.innerHTML = letter;
                     letter9.style.color = "white";
                     m.style.border = "1px solid green";
                     let anotherIndex8 = splitRandom.indexOf(letter, 9);
-                    if(anotherIndex8 == 9){
-                        letter10.innerHTML = letter;
-                        letter10.style.color = "white";
-                    }
+                        if(anotherIndex8 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
+                            letter10.innerHTML = letter;
+                            letter10.style.color = "white";
+                        }
                 }
                 if(indexOfLetter == 9){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter10.innerHTML = letter;
                     letter10.style.color = "white";
                     m.style.border = "1px solid green";
@@ -3954,242 +5394,352 @@ function checkLetter(){
                 n.classList.add('greenN');
                 let indexOfLetter = splitRandom.indexOf(letter);
                 if(indexOfLetter == 0){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter1.innerHTML = letter;
                     letter1.style.color = "white";
                     n.style.border = "1px solid green";
                     let anotherIndex = splitRandom.indexOf(letter, 1);
                     console.log(anotherIndex)
                         if(anotherIndex == 1){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter2.innerHTML = letter;
                             letter2.style.color = "white";    
                         }
                         if(anotherIndex == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";    
                         }
                         if(anotherIndex == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";    
                         }
                         if(anotherIndex == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";    
                         }
                         if(anotherIndex == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";    
                         }
                         if(anotherIndex == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";    
                         }
                         if(anotherIndex == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";    
                         }
                         if(anotherIndex == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";    
                         }
                         if(anotherIndex == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";    
                         }
                     
                 }
                 if(indexOfLetter == 1){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter2.innerHTML = letter;
                     letter2.style.color = "white";
                     n.style.border = "1px solid green";
                     let anotherIndex1 = splitRandom.indexOf(letter, 2);
                         if(anotherIndex1 == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";
                         }
                         if(anotherIndex1 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex1 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex1 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex1 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex1 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex1 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex1 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 2){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter3.innerHTML = letter;
                     letter3.style.color = "white";
                     n.style.border = "1px solid green";
                     let anotherIndex2 = splitRandom.indexOf(letter, 3);
                         if(anotherIndex2 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex2 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex2 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex2 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex2 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex2 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex2 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 3){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter4.innerHTML = letter;
                     letter4.style.color = "white";
                     n.style.border = "1px solid green";
                     let anotherIndex3 = splitRandom.indexOf(letter, 4);
                         if(anotherIndex3 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex3 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex3 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex3 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex3 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex3 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 4){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter5.innerHTML = letter;
                     letter5.style.color = "white";
                     n.style.border = "1px solid green";
                     let anotherIndex4 = splitRandom.indexOf(letter, 5);
                         if(anotherIndex4 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex4 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex4 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex4 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex4 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 5){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter6.innerHTML = letter;
-                    letter6style.color = "white";
+                    letter6.style.color = "white";
                     n.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex5 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex5 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex5 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 6){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter7.innerHTML = letter;
                     letter7.style.color = "white";
                     n.style.border = "1px solid green";
                     let anotherIndex6 = splitRandom.indexOf(letter, 7);
                         if(anotherIndex6 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex6 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex6 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 7){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter8.innerHTML = letter;
                     letter8.style.color = "white";
                     n.style.border = "1px solid green";
                      let anotherIndex7 = splitRandom.indexOf(letter, 8);
                         if(anotherIndex7 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex7 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 8){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter9.innerHTML = letter;
                     letter9.style.color = "white";
                     n.style.border = "1px solid green";
                     let anotherIndex8 = splitRandom.indexOf(letter, 9);
                     if(anotherIndex8 == 9){
+                        correctLetters += 1;
+                        console.log(correctLetters)
                         letter10.innerHTML = letter;
                         letter10.style.color = "white";
                     }
                 }
                 if(indexOfLetter == 9){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter10.innerHTML = letter;
                     letter10.style.color = "white";
                     n.style.border = "1px solid green";
@@ -4244,242 +5794,352 @@ function checkLetter(){
                 o.classList.add('greenO');
                 let indexOfLetter = splitRandom.indexOf(letter);
                 if(indexOfLetter == 0){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter1.innerHTML = letter;
                     letter1.style.color = "white";
                     o.style.border = "1px solid green";
                     let anotherIndex = splitRandom.indexOf(letter, 1);
                     console.log(anotherIndex)
                         if(anotherIndex == 1){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter2.innerHTML = letter;
                             letter2.style.color = "white";    
                         }
                         if(anotherIndex == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";    
                         }
                         if(anotherIndex == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";    
                         }
                         if(anotherIndex == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";    
                         }
                         if(anotherIndex == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";    
                         }
                         if(anotherIndex == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";    
                         }
                         if(anotherIndex == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";    
                         }
                         if(anotherIndex == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";    
                         }
                         if(anotherIndex == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";    
                         }
                     
                 }
                 if(indexOfLetter == 1){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter2.innerHTML = letter;
                     letter2.style.color = "white";
                     o.style.border = "1px solid green";
                     let anotherIndex1 = splitRandom.indexOf(letter, 2);
                         if(anotherIndex1 == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";
                         }
                         if(anotherIndex1 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex1 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex1 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex1 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex1 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex1 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex1 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 2){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter3.innerHTML = letter;
                     letter3.style.color = "white";
                     o.style.border = "1px solid green";
                     let anotherIndex2 = splitRandom.indexOf(letter, 3);
                         if(anotherIndex2 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex2 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex2 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex2 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex2 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex2 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex2 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 3){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter4.innerHTML = letter;
                     letter4.style.color = "white";
                     o.style.border = "1px solid green";
                     let anotherIndex3 = splitRandom.indexOf(letter, 4);
                         if(anotherIndex3 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex3 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex3 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex3 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex3 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex3 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 4){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter5.innerHTML = letter;
                     letter5.style.color = "white";
                     o.style.border = "1px solid green";
                     let anotherIndex4 = splitRandom.indexOf(letter, 5);
                         if(anotherIndex4 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex4 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex4 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex4 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex4 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 5){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter6.innerHTML = letter;
                     letter6.style.color = "white";
                     o.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex5 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex5 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex5 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 6){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter7.innerHTML = letter;
                     letter7.style.color = "white";
                     o.style.border = "1px solid green";
                     let anotherIndex6 = splitRandom.indexOf(letter, 7);
                         if(anotherIndex6 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex6 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex6 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 7){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter8.innerHTML = letter;
                     letter8.style.color = "white";
                     o.style.border = "1px solid green";
                      let anotherIndex7 = splitRandom.indexOf(letter, 8);
                         if(anotherIndex7 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex7 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 8){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter9.innerHTML = letter;
                     letter9.style.color = "white";
                     o.style.border = "1px solid green";
                     let anotherIndex8 = splitRandom.indexOf(letter, 9);
-                    if(anotherIndex8 == 9){
-                        letter10.innerHTML = letter;
-                        letter10.style.color = "white";
-                    }
+                        if(anotherIndex8 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
+                            letter10.innerHTML = letter;
+                            letter10.style.color = "white";
+                        }
                 }
                 if(indexOfLetter == 9){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter10.innerHTML = letter;
                     letter10.style.color = "white";
                     o.style.border = "1px solid green";
@@ -4534,242 +6194,352 @@ function checkLetter(){
                 p.classList.add('greenP');
                 let indexOfLetter = splitRandom.indexOf(letter);
                 if(indexOfLetter == 0){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter1.innerHTML = letter;
                     letter1.style.color = "white";
                     p.style.border = "1px solid green";
                     let anotherIndex = splitRandom.indexOf(letter, 1);
                     console.log(anotherIndex)
                         if(anotherIndex == 1){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter2.innerHTML = letter;
                             letter2.style.color = "white";    
                         }
                         if(anotherIndex == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";    
                         }
                         if(anotherIndex == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";    
                         }
                         if(anotherIndex == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";    
                         }
                         if(anotherIndex == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";    
                         }
                         if(anotherIndex == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";    
                         }
                         if(anotherIndex == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";    
                         }
                         if(anotherIndex == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";    
                         }
                         if(anotherIndex == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";    
                         }
                     
                 }
                 if(indexOfLetter == 1){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter2.innerHTML = letter;
                     letter2.style.color = "white";
                     p.style.border = "1px solid green";
                     let anotherIndex1 = splitRandom.indexOf(letter, 2);
                         if(anotherIndex1 == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";
                         }
                         if(anotherIndex1 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex1 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex1 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex1 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex1 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex1 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex1 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 2){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter3.innerHTML = letter;
                     letter3.style.color = "white";
                     p.style.border = "1px solid green";
                     let anotherIndex2 = splitRandom.indexOf(letter, 3);
                         if(anotherIndex2 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex2 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex2 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex2 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex2 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex2 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex2 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 3){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter4.innerHTML = letter;
                     letter4.style.color = "white";
                     p.style.border = "1px solid green";
                     let anotherIndex3 = splitRandom.indexOf(letter, 4);
                         if(anotherIndex3 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex3 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex3 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex3 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex3 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex3 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 4){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter5.innerHTML = letter;
                     letter5.style.color = "white";
                     p.style.border = "1px solid green";
                     let anotherIndex4 = splitRandom.indexOf(letter, 5);
                         if(anotherIndex4 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex4 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex4 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex4 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex4 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 5){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter6.innerHTML = letter;
                     letter6.style.color = "white";
                     p.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex5 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex5 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex5 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 6){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter7.innerHTML = letter;
                     letter7.style.color = "white";
                     p.style.border = "1px solid green";
                     let anotherIndex6 = splitRandom.indexOf(letter, 7);
                         if(anotherIndex6 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex6 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex6 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 7){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter8.innerHTML = letter;
                     letter8.style.color = "white";
                     p.style.border = "1px solid green";
                      let anotherIndex7 = splitRandom.indexOf(letter, 8);
                         if(anotherIndex7 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex7 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 8){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter9.innerHTML = letter;
                     letter9.style.color = "white";
                     p.style.border = "1px solid green";
                     let anotherIndex8 = splitRandom.indexOf(letter, 9);
                     if(anotherIndex8 == 9){
+                        correctLetters += 1;
+                            console.log(correctLetters)
                         letter10.innerHTML = letter;
                         letter10.style.color = "white";
                     }
                 }
                 if(indexOfLetter == 9){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter10.innerHTML = letter;
                     letter10.style.color = "white";
                     p.style.border = "1px solid green";
@@ -4824,242 +6594,352 @@ function checkLetter(){
                 q.classList.add('greenQ');
                 let indexOfLetter = splitRandom.indexOf(letter);
                 if(indexOfLetter == 0){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter1.innerHTML = letter;
                     letter1.style.color = "white";
                     q.style.border = "1px solid green";
                     let anotherIndex = splitRandom.indexOf(letter, 1);
                     console.log(anotherIndex)
                         if(anotherIndex == 1){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter2.innerHTML = letter;
                             letter2.style.color = "white";    
                         }
                         if(anotherIndex == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";    
                         }
                         if(anotherIndex == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";    
                         }
                         if(anotherIndex == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";    
                         }
                         if(anotherIndex == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";    
                         }
                         if(anotherIndex == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";    
                         }
                         if(anotherIndex == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";    
                         }
                         if(anotherIndex == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";    
                         }
                         if(anotherIndex == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";    
                         }
                     
                 }
                 if(indexOfLetter == 1){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter2.innerHTML = letter;
                     letter2.style.color = "white";
                     q.style.border = "1px solid green";
                     let anotherIndex1 = splitRandom.indexOf(letter, 2);
                         if(anotherIndex1 == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";
                         }
                         if(anotherIndex1 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex1 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex1 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex1 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex1 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex1 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex1 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 2){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter3.innerHTML = letter;
                     letter3.style.color = "white";
                     q.style.border = "1px solid green";
                     let anotherIndex2 = splitRandom.indexOf(letter, 3);
                         if(anotherIndex2 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex2 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex2 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex2 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex2 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex2 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex2 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 3){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter4.innerHTML = letter;
                     letter4.style.color = "white";
                     q.style.border = "1px solid green";
                     let anotherIndex3 = splitRandom.indexOf(letter, 4);
                         if(anotherIndex3 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex3 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex3 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex3 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex3 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex3 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 4){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter5.innerHTML = letter;
                     letter5.style.color = "white";
                     q.style.border = "1px solid green";
                     let anotherIndex4 = splitRandom.indexOf(letter, 5);
                         if(anotherIndex4 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex4 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex4 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex4 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex4 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 5){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter6.innerHTML = letter;
                     letter6.style.color = "white";
                     q.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex5 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex5 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex5 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 6){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter7.innerHTML = letter;
                     letter7.style.color = "white";
                     q.style.border = "1px solid green";
                     let anotherIndex6 = splitRandom.indexOf(letter, 7);
                         if(anotherIndex6 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex6 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex6 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 7){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter8.innerHTML = letter;
                     letter8.style.color = "white";
                     q.style.border = "1px solid green";
                      let anotherIndex7 = splitRandom.indexOf(letter, 8);
                         if(anotherIndex7 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex7 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 8){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter9.innerHTML = letter;
                     letter9.style.color = "white";
                     q.style.border = "1px solid green";
                     let anotherIndex8 = splitRandom.indexOf(letter, 9);
                     if(anotherIndex8 == 9){
+                        correctLetters += 1;
+                        console.log(correctLetters)
                         letter10.innerHTML = letter;
                         letter10.style.color = "white";
                     }
                 }
                 if(indexOfLetter == 9){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter10.innerHTML = letter;
                     letter10.style.color = "white";
                     q.style.border = "1px solid green";
@@ -5114,242 +6994,352 @@ function checkLetter(){
                 r.classList.add('greenR');
                 let indexOfLetter = splitRandom.indexOf(letter);
                 if(indexOfLetter == 0){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter1.innerHTML = letter;
                     letter1.style.color = "white";
                     r.style.border = "1px solid green";
                     let anotherIndex = splitRandom.indexOf(letter, 1);
                     console.log(anotherIndex)
                         if(anotherIndex == 1){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter2.innerHTML = letter;
                             letter2.style.color = "white";    
                         }
                         if(anotherIndex == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";    
                         }
                         if(anotherIndex == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";    
                         }
                         if(anotherIndex == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";    
                         }
                         if(anotherIndex == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";    
                         }
                         if(anotherIndex == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";    
                         }
                         if(anotherIndex == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";    
                         }
                         if(anotherIndex == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";    
                         }
                         if(anotherIndex == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";    
                         }
                     
                 }
                 if(indexOfLetter == 1){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter2.innerHTML = letter;
                     letter2.style.color = "white";
                     r.style.border = "1px solid green";
                     let anotherIndex1 = splitRandom.indexOf(letter, 2);
                         if(anotherIndex1 == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";
                         }
                         if(anotherIndex1 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex1 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex1 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex1 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex1 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex1 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex1 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 2){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter3.innerHTML = letter;
                     letter3.style.color = "white";
                     r.style.border = "1px solid green";
                     let anotherIndex2 = splitRandom.indexOf(letter, 3);
                         if(anotherIndex2 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex2 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex2 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex2 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex2 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex2 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex2 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 3){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter4.innerHTML = letter;
                     letter4.style.color = "white";
                     r.style.border = "1px solid green";
                     let anotherIndex3 = splitRandom.indexOf(letter, 4);
                         if(anotherIndex3 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex3 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex3 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex3 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex3 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex3 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 4){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter5.innerHTML = letter;
                     letter5.style.color = "white";
                     r.style.border = "1px solid green";
                     let anotherIndex4 = splitRandom.indexOf(letter, 5);
                         if(anotherIndex4 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex4 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex4 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex4 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex4 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 5){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter6.innerHTML = letter;
                     letter6.style.color = "white";
                     r.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex5 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex5 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex5 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 6){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter7.innerHTML = letter;
                     letter7.style.color = "white";
                     r.style.border = "1px solid green";
                     let anotherIndex6 = splitRandom.indexOf(letter, 7);
                         if(anotherIndex6 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex6 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex6 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 7){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter8.innerHTML = letter;
                     letter8.style.color = "white";
                     r.style.border = "1px solid green";
                      let anotherIndex7 = splitRandom.indexOf(letter, 8);
                         if(anotherIndex7 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex7 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 8){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter9.innerHTML = letter;
                     letter9.style.color = "white";
                     r.style.border = "1px solid green";
                     let anotherIndex8 = splitRandom.indexOf(letter, 9);
                     if(anotherIndex8 == 9){
+                        correctLetters += 1;
+                        console.log(correctLetters)
                         letter10.innerHTML = letter;
                         letter10.style.color = "white";
                     }
                 }
                 if(indexOfLetter == 9){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter10.innerHTML = letter;
                     letter10.style.color = "white";
                     r.style.border = "1px solid green";
@@ -5404,242 +7394,352 @@ function checkLetter(){
                 s.classList.add('greenS');
                 let indexOfLetter = splitRandom.indexOf(letter);
                 if(indexOfLetter == 0){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter1.innerHTML = letter;
                     letter1.style.color = "white";
                     s.style.border = "1px solid green";
                     let anotherIndex = splitRandom.indexOf(letter, 1);
                     console.log(anotherIndex)
                         if(anotherIndex == 1){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter2.innerHTML = letter;
                             letter2.style.color = "white";    
                         }
                         if(anotherIndex == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";    
                         }
                         if(anotherIndex == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";    
                         }
                         if(anotherIndex == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";    
                         }
                         if(anotherIndex == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";    
                         }
                         if(anotherIndex == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";    
                         }
                         if(anotherIndex == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";    
                         }
                         if(anotherIndex == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";    
                         }
                         if(anotherIndex == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";    
                         }
                     
                 }
                 if(indexOfLetter == 1){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter2.innerHTML = letter;
                     letter2.style.color = "white";
                     s.style.border = "1px solid green";
                     let anotherIndex1 = splitRandom.indexOf(letter, 2);
                         if(anotherIndex1 == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";
                         }
                         if(anotherIndex1 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex1 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex1 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex1 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex1 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex1 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex1 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 2){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter3.innerHTML = letter;
                     letter3.style.color = "white";
                     s.style.border = "1px solid green";
                     let anotherIndex2 = splitRandom.indexOf(letter, 3);
                         if(anotherIndex2 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex2 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex2 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex2 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex2 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex2 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex2 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 3){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter4.innerHTML = letter;
                     letter4.style.color = "white";
                     s.style.border = "1px solid green";
                     let anotherIndex3 = splitRandom.indexOf(letter, 4);
                         if(anotherIndex3 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex3 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex3 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex3 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex3 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex3 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 4){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter5.innerHTML = letter;
                     letter5.style.color = "white";
                     s.style.border = "1px solid green";
                     let anotherIndex4 = splitRandom.indexOf(letter, 5);
                         if(anotherIndex4 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex4 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex4 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex4 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex4 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 5){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter6.innerHTML = letter;
                     letter6.style.color = "white";
                     s.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex5 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex5 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex5 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 6){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter7.innerHTML = letter;
                     letter7.style.color = "white";
                     s.style.border = "1px solid green";
                     let anotherIndex6 = splitRandom.indexOf(letter, 7);
                         if(anotherIndex6 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex6 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex6 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 7){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter8.innerHTML = letter;
                     letter8.style.color = "white";
                     s.style.border = "1px solid green";
                      let anotherIndex7 = splitRandom.indexOf(letter, 8);
                         if(anotherIndex7 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex7 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 8){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter9.innerHTML = letter;
                     letter9.style.color = "white";
                     s.style.border = "1px solid green";
                     let anotherIndex8 = splitRandom.indexOf(letter, 9);
                     if(anotherIndex8 == 9){
+                        correctLetters += 1;
+                        console.log(correctLetters)
                         letter10.innerHTML = letter;
                         letter10.style.color = "white";
                     }
                 }
                 if(indexOfLetter == 9){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter10.innerHTML = letter;
                     letter10.style.color = "white";
                     s.style.border = "1px solid green";
@@ -5694,242 +7794,352 @@ function checkLetter(){
                 t.classList.add('greenT');
                 let indexOfLetter = splitRandom.indexOf(letter);
                 if(indexOfLetter == 0){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter1.innerHTML = letter;
                     letter1.style.color = "white";
                     t.style.border = "1px solid green";
                     let anotherIndex = splitRandom.indexOf(letter, 1);
                     console.log(anotherIndex)
                         if(anotherIndex == 1){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter2.innerHTML = letter;
                             letter2.style.color = "white";    
                         }
                         if(anotherIndex == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";    
                         }
                         if(anotherIndex == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";    
                         }
                         if(anotherIndex == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";    
                         }
                         if(anotherIndex == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";    
                         }
                         if(anotherIndex == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";    
                         }
                         if(anotherIndex == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";    
                         }
                         if(anotherIndex == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";    
                         }
                         if(anotherIndex == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";    
                         }
                     
                 }
                 if(indexOfLetter == 1){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter2.innerHTML = letter;
                     letter2.style.color = "white";
                     t.style.border = "1px solid green";
                     let anotherIndex1 = splitRandom.indexOf(letter, 2);
                         if(anotherIndex1 == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";
                         }
                         if(anotherIndex1 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex1 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex1 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex1 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex1 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex1 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex1 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 2){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter3.innerHTML = letter;
                     letter3.style.color = "white";
                     t.style.border = "1px solid green";
                     let anotherIndex2 = splitRandom.indexOf(letter, 3);
                         if(anotherIndex2 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex2 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex2 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex2 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex2 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex2 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex2 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 3){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter4.innerHTML = letter;
                     letter4.style.color = "white";
                     t.style.border = "1px solid green";
                     let anotherIndex3 = splitRandom.indexOf(letter, 4);
                         if(anotherIndex3 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex3 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex3 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex3 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex3 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex3 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 4){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter5.innerHTML = letter;
                     letter5.style.color = "white";
                     t.style.border = "1px solid green";
                     let anotherIndex4 = splitRandom.indexOf(letter, 5);
                         if(anotherIndex4 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex4 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex4 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex4 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex4 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 5){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter6.innerHTML = letter;
                     letter6.style.color = "white";
                     t.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex5 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex5 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex5 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 6){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter7.innerHTML = letter;
                     letter7.style.color = "white";
                     t.style.border = "1px solid green";
                     let anotherIndex6 = splitRandom.indexOf(letter, 7);
                         if(anotherIndex6 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex6 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex6 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 7){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter8.innerHTML = letter;
                     letter8.style.color = "white";
                     t.style.border = "1px solid green";
                      let anotherIndex7 = splitRandom.indexOf(letter, 8);
                         if(anotherIndex7 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex7 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 8){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter9.innerHTML = letter;
                     letter9.style.color = "white";
                     t.style.border = "1px solid green";
                     let anotherIndex8 = splitRandom.indexOf(letter, 9);
                     if(anotherIndex8 == 9){
+                        correctLetters += 1;
+                        console.log(correctLetters)
                         letter10.innerHTML = letter;
                         letter10.style.color = "white";
                     }
                 }
                 if(indexOfLetter == 9){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter10.innerHTML = letter;
                     letter10.style.color = "white";
                     t.style.border = "1px solid green";
@@ -5984,242 +8194,352 @@ function checkLetter(){
                 u.classList.add('greenU');
                 let indexOfLetter = splitRandom.indexOf(letter);
                 if(indexOfLetter == 0){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter1.innerHTML = letter;
                     letter1.style.color = "white";
                     u.style.border = "1px solid green";
                     let anotherIndex = splitRandom.indexOf(letter, 1);
                     console.log(anotherIndex)
                         if(anotherIndex == 1){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter2.innerHTML = letter;
                             letter2.style.color = "white";    
                         }
                         if(anotherIndex == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";    
                         }
                         if(anotherIndex == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";    
                         }
                         if(anotherIndex == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";    
                         }
                         if(anotherIndex == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";    
                         }
                         if(anotherIndex == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";    
                         }
                         if(anotherIndex == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";    
                         }
                         if(anotherIndex == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";    
                         }
                         if(anotherIndex == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";    
                         }
                     
                 }
                 if(indexOfLetter == 1){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter2.innerHTML = letter;
                     letter2.style.color = "white";
                     u.style.border = "1px solid green";
                     let anotherIndex1 = splitRandom.indexOf(letter, 2);
                         if(anotherIndex1 == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";
                         }
                         if(anotherIndex1 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex1 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex1 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex1 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex1 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex1 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex1 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 2){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter3.innerHTML = letter;
                     letter3.style.color = "white";
                     u.style.border = "1px solid green";
                     let anotherIndex2 = splitRandom.indexOf(letter, 3);
                         if(anotherIndex2 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex2 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex2 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex2 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex2 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex2 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex2 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 3){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter4.innerHTML = letter;
                     letter4.style.color = "white";
                     u.style.border = "1px solid green";
                     let anotherIndex3 = splitRandom.indexOf(letter, 4);
                         if(anotherIndex3 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex3 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex3 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex3 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex3 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex3 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 4){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter5.innerHTML = letter;
                     letter5.style.color = "white";
                     u.style.border = "1px solid green";
                     let anotherIndex4 = splitRandom.indexOf(letter, 5);
                         if(anotherIndex4 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex4 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex4 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex4 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex4 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 5){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter6.innerHTML = letter;
                     letter6.style.color = "white";
                     u.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex5 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex5 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex5 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 6){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter7.innerHTML = letter;
                     letter7.style.color = "white";
                     u.style.border = "1px solid green";
                     let anotherIndex6 = splitRandom.indexOf(letter, 7);
                         if(anotherIndex6 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex6 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex6 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 7){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter8.innerHTML = letter;
                     letter8.style.color = "white";
                     u.style.border = "1px solid green";
                      let anotherIndex7 = splitRandom.indexOf(letter, 8);
                         if(anotherIndex7 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex7 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 8){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter9.innerHTML = letter;
                     letter9.style.color = "white";
                     u.style.border = "1px solid green";
                     let anotherIndex8 = splitRandom.indexOf(letter, 9);
                     if(anotherIndex8 == 9){
+                        correctLetters += 1;
+                        console.log(correctLetters)
                         letter10.innerHTML = letter;
                         letter10.style.color = "white";
                     }
                 }
                 if(indexOfLetter == 9){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter10.innerHTML = letter;
                     letter10.style.color = "white";
                     u.style.border = "1px solid green";
@@ -6274,242 +8594,352 @@ function checkLetter(){
                 v.classList.add('greenV');
                 let indexOfLetter = splitRandom.indexOf(letter);
                 if(indexOfLetter == 0){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter1.innerHTML = letter;
                     letter1.style.color = "white";
                     v.style.border = "1px solid green";
                     let anotherIndex = splitRandom.indexOf(letter, 1);
                     console.log(anotherIndex)
                         if(anotherIndex == 1){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter2.innerHTML = letter;
                             letter2.style.color = "white";    
                         }
                         if(anotherIndex == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";    
                         }
                         if(anotherIndex == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";    
                         }
                         if(anotherIndex == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";    
                         }
                         if(anotherIndex == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";    
                         }
                         if(anotherIndex == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";    
                         }
                         if(anotherIndex == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";    
                         }
                         if(anotherIndex == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";    
                         }
                         if(anotherIndex == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";    
                         }
                     
                 }
                 if(indexOfLetter == 1){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter2.innerHTML = letter;
                     letter2.style.color = "white";
                     v.style.border = "1px solid green";
                     let anotherIndex1 = splitRandom.indexOf(letter, 2);
                         if(anotherIndex1 == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";
                         }
                         if(anotherIndex1 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex1 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex1 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex1 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex1 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex1 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex1 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 2){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter3.innerHTML = letter;
                     letter3.style.color = "white";
                     v.style.border = "1px solid green";
                     let anotherIndex2 = splitRandom.indexOf(letter, 3);
                         if(anotherIndex2 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex2 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex2 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex2 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex2 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex2 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex2 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 3){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter4.innerHTML = letter;
                     letter4.style.color = "white";
                     v.style.border = "1px solid green";
                     let anotherIndex3 = splitRandom.indexOf(letter, 4);
                         if(anotherIndex3 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex3 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex3 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex3 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex3 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex3 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 4){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter5.innerHTML = letter;
                     letter5.style.color = "white";
                     v.style.border = "1px solid green";
                     let anotherIndex4 = splitRandom.indexOf(letter, 5);
                         if(anotherIndex4 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex4 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex4 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex4 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex4 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 5){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter6.innerHTML = letter;
                     letter6.style.color = "white";
                     v.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex5 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex5 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex5 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 6){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter7.innerHTML = letter;
                     letter7.style.color = "white";
                     v.style.border = "1px solid green";
                     let anotherIndex6 = splitRandom.indexOf(letter, 7);
                         if(anotherIndex6 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex6 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex6 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 7){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter8.innerHTML = letter;
                     letter8.style.color = "white";
                     v.style.border = "1px solid green";
                      let anotherIndex7 = splitRandom.indexOf(letter, 8);
                         if(anotherIndex7 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex7 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 8){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter9.innerHTML = letter;
                     letter9.style.color = "white";
                     v.style.border = "1px solid green";
                     let anotherIndex8 = splitRandom.indexOf(letter, 9);
                     if(anotherIndex8 == 9){
+                        correctLetters += 1;
+                        console.log(correctLetters)
                         letter10.innerHTML = letter;
                         letter10.style.color = "white";
                     }
                 }
                 if(indexOfLetter == 9){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter10.innerHTML = letter;
                     letter10.style.color = "white";
                     v.style.border = "1px solid green";
@@ -6564,242 +8994,352 @@ function checkLetter(){
                 w.classList.add('greenW');
                 let indexOfLetter = splitRandom.indexOf(letter);
                 if(indexOfLetter == 0){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter1.innerHTML = letter;
                     letter1.style.color = "white";
                     w.style.border = "1px solid green";
                     let anotherIndex = splitRandom.indexOf(letter, 1);
                     console.log(anotherIndex)
                         if(anotherIndex == 1){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter2.innerHTML = letter;
                             letter2.style.color = "white";    
                         }
                         if(anotherIndex == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";    
                         }
                         if(anotherIndex == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";    
                         }
                         if(anotherIndex == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";    
                         }
                         if(anotherIndex == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";    
                         }
                         if(anotherIndex == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";    
                         }
                         if(anotherIndex == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";    
                         }
                         if(anotherIndex == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";    
                         }
                         if(anotherIndex == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";    
                         }
                     
                 }
                 if(indexOfLetter == 1){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter2.innerHTML = letter;
                     letter2.style.color = "white";
                     w.style.border = "1px solid green";
                     let anotherIndex1 = splitRandom.indexOf(letter, 2);
                         if(anotherIndex1 == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";
                         }
                         if(anotherIndex1 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex1 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex1 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex1 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex1 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex1 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex1 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 2){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter3.innerHTML = letter;
                     letter3.style.color = "white";
                     w.style.border = "1px solid green";
                     let anotherIndex2 = splitRandom.indexOf(letter, 3);
                         if(anotherIndex2 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex2 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex2 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex2 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex2 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex2 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex2 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 3){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter4.innerHTML = letter;
                     letter4.style.color = "white";
                     w.style.border = "1px solid green";
                     let anotherIndex3 = splitRandom.indexOf(letter, 4);
                         if(anotherIndex3 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex3 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex3 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex3 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex3 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex3 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 4){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter5.innerHTML = letter;
                     letter5.style.color = "white";
                     w.style.border = "1px solid green";
                     let anotherIndex4 = splitRandom.indexOf(letter, 5);
                         if(anotherIndex4 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex4 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex4 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex4 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex4 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 5){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter6.innerHTML = letter;
                     letter6.style.color = "white";
                     w.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex5 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex5 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex5 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 6){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter7.innerHTML = letter;
                     letter7.style.color = "white";
                     w.style.border = "1px solid green";
                     let anotherIndex6 = splitRandom.indexOf(letter, 7);
                         if(anotherIndex6 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex6 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex6 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 7){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter8.innerHTML = letter;
                     letter8.style.color = "white";
                     w.style.border = "1px solid green";
                      let anotherIndex7 = splitRandom.indexOf(letter, 8);
                         if(anotherIndex7 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex7 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 8){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter9.innerHTML = letter;
                     letter9.style.color = "white";
                     w.style.border = "1px solid green";
                     let anotherIndex8 = splitRandom.indexOf(letter, 9);
                     if(anotherIndex8 == 9){
+                        correctLetters += 1;
+                        console.log(correctLetters)
                         letter10.innerHTML = letter;
                         letter10.style.color = "white";
                     }
                 }
                 if(indexOfLetter == 9){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter10.innerHTML = letter;
                     letter10.style.color = "white";
                     w.style.border = "1px solid green";
@@ -6854,242 +9394,352 @@ function checkLetter(){
                 x.classList.add('greenX');
                 let indexOfLetter = splitRandom.indexOf(letter);
                 if(indexOfLetter == 0){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter1.innerHTML = letter;
                     letter1.style.color = "white";
                     x.style.border = "1px solid green";
                     let anotherIndex = splitRandom.indexOf(letter, 1);
                     console.log(anotherIndex)
                         if(anotherIndex == 1){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter2.innerHTML = letter;
                             letter2.style.color = "white";    
                         }
                         if(anotherIndex == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";    
                         }
                         if(anotherIndex == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";    
                         }
                         if(anotherIndex == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";    
                         }
                         if(anotherIndex == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";    
                         }
                         if(anotherIndex == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";    
                         }
                         if(anotherIndex == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";    
                         }
                         if(anotherIndex == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";    
                         }
                         if(anotherIndex == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";    
                         }
                     
                 }
                 if(indexOfLetter == 1){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter2.innerHTML = letter;
                     letter2.style.color = "white";
                     x.style.border = "1px solid green";
                     let anotherIndex1 = splitRandom.indexOf(letter, 2);
                         if(anotherIndex1 == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";
                         }
                         if(anotherIndex1 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex1 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex1 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex1 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex1 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex1 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex1 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 2){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter3.innerHTML = letter;
                     letter3.style.color = "white";
                     x.style.border = "1px solid green";
                     let anotherIndex2 = splitRandom.indexOf(letter, 3);
                         if(anotherIndex2 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex2 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex2 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex2 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex2 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex2 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex2 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 3){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter4.innerHTML = letter;
                     letter4.style.color = "white";
                     x.style.border = "1px solid green";
                     let anotherIndex3 = splitRandom.indexOf(letter, 4);
                         if(anotherIndex3 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex3 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex3 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex3 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex3 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex3 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 4){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter5.innerHTML = letter;
                     letter5.style.color = "white";
                     x.style.border = "1px solid green";
                     let anotherIndex4 = splitRandom.indexOf(letter, 5);
                         if(anotherIndex4 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex4 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex4 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex4 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex4 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 5){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter6.innerHTML = letter;
                     letter6.style.color = "white";
                     x.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex5 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex5 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex5 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 6){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter7.innerHTML = letter;
                     letter7.style.color = "white";
                     x.style.border = "1px solid green";
                     let anotherIndex6 = splitRandom.indexOf(letter, 7);
                         if(anotherIndex6 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex6 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex6 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 7){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter8.innerHTML = letter;
                     letter8.style.color = "white";
                     x.style.border = "1px solid green";
                      let anotherIndex7 = splitRandom.indexOf(letter, 8);
                         if(anotherIndex7 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex7 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 8){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter9.innerHTML = letter;
                     letter9.style.color = "white";
                     x.style.border = "1px solid green";
                     let anotherIndex8 = splitRandom.indexOf(letter, 9);
                     if(anotherIndex8 == 9){
+                        correctLetters += 1;
+                        console.log(correctLetters)
                         letter10.innerHTML = letter;
                         letter10.style.color = "white";
                     }
                 }
                 if(indexOfLetter == 9){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter10.innerHTML = letter;
                     letter10.style.color = "white";
                     x.style.border = "1px solid green";
@@ -7144,6 +9794,8 @@ function checkLetter(){
                 y.classList.add('greenY');
                 let indexOfLetter = splitRandom.indexOf(letter);
                 if(indexOfLetter == 0){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter1.innerHTML = letter;
                     letter1.style.color = "white";
                     y.style.border = "1px solid green";
@@ -7151,236 +9803,344 @@ function checkLetter(){
                     let anotherIndex = splitRandom.indexOf(letter, 1);
                     console.log(anotherIndex)
                         if(anotherIndex == 1){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter2.innerHTML = letter;
                             letter2.style.color = "white";    
                         }
                         if(anotherIndex == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";    
                         }
                         if(anotherIndex == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";    
                         }
                         if(anotherIndex == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";    
                         }
                         if(anotherIndex == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";    
                         }
                         if(anotherIndex == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";    
                         }
                         if(anotherIndex == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";    
                         }
                         if(anotherIndex == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";    
                         }
                         if(anotherIndex == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";    
                         }
                     
                 }
                 if(indexOfLetter == 1){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter2.innerHTML = letter;
                     letter2.style.color = "white";
                     y.style.border = "1px solid green";
                     let anotherIndex1 = splitRandom.indexOf(letter, 2);
                         if(anotherIndex1 == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";
                         }
                         if(anotherIndex1 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex1 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex1 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex1 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex1 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex1 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex1 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 2){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter3.innerHTML = letter;
                     letter3.style.color = "white";
                     y.style.border = "1px solid green";
                     let anotherIndex2 = splitRandom.indexOf(letter, 3);
                         if(anotherIndex2 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex2 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex2 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex2 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex2 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex2 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex2 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 3){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter4.innerHTML = letter;
                     letter4.style.color = "white";
                     y.style.border = "1px solid green";
                     let anotherIndex3 = splitRandom.indexOf(letter, 4);
                         if(anotherIndex3 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex3 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex3 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex3 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex3 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex3 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 4){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter5.innerHTML = letter;
                     letter5.style.color = "white";
                     y.style.border = "1px solid green";
                     let anotherIndex4 = splitRandom.indexOf(letter, 5);
                         if(anotherIndex4 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex4 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex4 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex4 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex4 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 5){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter6.innerHTML = letter;
                     letter6.style.color = "white";
                     y.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex5 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex5 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex5 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 6){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter7.innerHTML = letter;
                     letter7.style.color = "white";
                     y.style.border = "1px solid green";
                     let anotherIndex6 = splitRandom.indexOf(letter, 7);
                         if(anotherIndex6 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex6 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex6 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 7){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter8.innerHTML = letter;
                     letter8.style.color = "white";
                     y.style.border = "1px solid green";
                      let anotherIndex7 = splitRandom.indexOf(letter, 8);
                         if(anotherIndex7 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex7 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 8){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter9.innerHTML = letter;
                     letter9.style.color = "white";
                     y.style.border = "1px solid green";
                     let anotherIndex8 = splitRandom.indexOf(letter, 9);
                     if(anotherIndex8 == 9){
+                        correctLetters += 1;
+                        console.log(correctLetters)
                         letter10.innerHTML = letter;
                         letter10.style.color = "white";
                     }
                 }
                 if(indexOfLetter == 9){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter10.innerHTML = letter;
                     letter10.style.color = "white";
                     y.style.border = "1px solid green";
@@ -7435,6 +10195,8 @@ function checkLetter(){
                 z.classList.add('greenZ');
                 let indexOfLetter = splitRandom.indexOf(letter);
                 if(indexOfLetter == 0){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter1.innerHTML = letter;
                     letter1.style.color = "white";
                     z.style.border = "1px solid green";
@@ -7442,236 +10204,344 @@ function checkLetter(){
                     let anotherIndex = splitRandom.indexOf(letter, 1);
                     console.log(anotherIndex)
                         if(anotherIndex == 1){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter2.innerHTML = letter;
                             letter2.style.color = "white";    
                         }
                         if(anotherIndex == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";    
                         }
                         if(anotherIndex == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";    
                         }
                         if(anotherIndex == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";    
                         }
                         if(anotherIndex == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";    
                         }
                         if(anotherIndex == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";    
                         }
                         if(anotherIndex == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";    
                         }
                         if(anotherIndex == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";    
                         }
                         if(anotherIndex == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";    
                         }
                     
                 }
                 if(indexOfLetter == 1){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter2.innerHTML = letter;
                     letter2.style.color = "white";
                     z.style.border = "1px solid green";
                     let anotherIndex1 = splitRandom.indexOf(letter, 2);
                         if(anotherIndex1 == 2){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter3.innerHTML = letter;
                             letter3.style.color = "white";
                         }
                         if(anotherIndex1 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex1 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex1 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex1 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex1 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex1 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex1 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 2){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter3.innerHTML = letter;
                     letter3.style.color = "white";
                     z.style.border = "1px solid green";
                     let anotherIndex2 = splitRandom.indexOf(letter, 3);
                         if(anotherIndex2 == 3){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter4.innerHTML = letter;
                             letter4.style.color = "white";
                         }
                         if(anotherIndex2 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex2 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex2 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex2 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex2 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex2 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 3){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter4.innerHTML = letter;
                     letter4.style.color = "white";
                     z.style.border = "1px solid green";
                     let anotherIndex3 = splitRandom.indexOf(letter, 4);
                         if(anotherIndex3 == 4){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter5.innerHTML = letter;
                             letter5.style.color = "white";
                         }
                         if(anotherIndex3 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex3 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex3 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex3 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex3 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 4){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter5.innerHTML = letter;
                     letter5.style.color = "white";
                     z.style.border = "1px solid green";
                     let anotherIndex4 = splitRandom.indexOf(letter, 5);
                         if(anotherIndex4 == 5){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter6.innerHTML = letter;
                             letter6.style.color = "white";
                         }
                         if(anotherIndex4 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex4 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex4 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex4 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 5){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter6.innerHTML = letter;
                     letter6.style.color = "white";
                     z.style.border = "1px solid green";
                      let anotherIndex5 = splitRandom.indexOf(letter, 6);
                         if(anotherIndex5 == 6){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter7.innerHTML = letter;
                             letter7.style.color = "white";
                         }
                         if(anotherIndex5 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex5 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex5 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 6){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter7.innerHTML = letter;
                     letter7.style.color = "white";
                     z.style.border = "1px solid green";
                     let anotherIndex6 = splitRandom.indexOf(letter, 7);
                         if(anotherIndex6 == 7){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter8.innerHTML = letter;
                             letter8.style.color = "white";
                         }
                         if(anotherIndex6 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex6 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 7){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter8.innerHTML = letter;
                     letter8.style.color = "white";
                     z.style.border = "1px solid green";
                      let anotherIndex7 = splitRandom.indexOf(letter, 8);
                         if(anotherIndex7 == 8){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter9.innerHTML = letter;
                             letter9.style.color = "white";
                         }
                         if(anotherIndex7 == 9){
+                            correctLetters += 1;
+                            console.log(correctLetters)
                             letter10.innerHTML = letter;
                             letter10.style.color = "white";
                         }
                 }
                 if(indexOfLetter == 8){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter9.innerHTML = letter;
                     letter9.style.color = "white";
                     z.style.border = "1px solid green";
                     let anotherIndex8 = splitRandom.indexOf(letter, 9);
                     if(anotherIndex8 == 9){
+                        correctLetters += 1;
+                        console.log(correctLetters)
                         letter10.innerHTML = letter;
                         letter10.style.color = "white";
                     }
                 }
                 if(indexOfLetter == 9){
+                    correctLetters += 1;
+                    console.log(correctLetters)
                     letter10.innerHTML = letter;
                     letter10.style.color = "white";
                     z.style.border = "1px solid green";
@@ -7720,10 +10590,14 @@ function checkLetter(){
                     z.classList.add('newZ');
                 }
             }
+            function winWinWin(){
+                if(correctLetters === lengthOfWords){
+                    gameSection.style.display = "none";
+                    correctLetters = 0;
+                }
+            }
+            setInterval(winWinWin, 1000)
 
 }   
-
-let numberOfRightLetters = document.querySelectorAll('span[right="win"]')
-console.log(numberOfRightLetters)
 
 checkLetter();

@@ -9,24 +9,12 @@
     <title>Hangman</title>
 </head>
 <body>
-    <section>
+    <section class="gameSection">
         <div class="all-cont">
             <div class="title">
                 <h1>Hangman</h1>
             </div>
-            <div class="word-area">
-                <span class="span1">?</span>
-                <span class="span2">?</span>
-                <span class="span3">?</span>
-                <span class="span4">?</span>
-                <span class="span5">?</span>
-                <span class="span6">?</span>
-                <span class="span7">?</span>
-                <span class="span8">?</span>
-                <span class="span9">?</span>
-                <span class="span10" right="win">?</span>
-            </div>
-            <div class="man-and-keys">
+            <div class="belowTitle">
                 <div class="man-hanging">
                     <svg width="185" height="245" viewBox="0 0 185 245" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="hangman">
@@ -56,38 +44,61 @@
                         </g>
                         </svg>
                 </div>
-                <div class="btns">
-                    <ul>
-                        <li class="a"><span>a</span></li>
-                        <li class="b"><span>b</span></li>
-                        <li class="c"><span>c</span></li>
-                        <li class="d"><span>d</span></li>
-                        <li class="e"><span>e</span></li>
-                        <li class="f"><span>f</span></li>
-                        <li class="g"><span>g</span></li>
-                        <li class="h"><span>h</span></li>
-                        <li class="i"><span>i</span></li>
-                        <li class="j"><span>j</span></li>
-                        <li class="k"><span>k</span></li>
-                        <li class="l"><span>l</span></li>
-                        <li class="m"><span>m</span></li>
-                        <li class="n"><span>n</span></li>
-                        <li class="o"><span>o</span></li>
-                        <li class="p"><span>p</span></li>
-                        <li class="q"><span>q</span></li>
-                        <li class="r"><span>r</span></li>
-                        <li class="s"><span>s</span></li>
-                        <li class="t"><span>t</span></li>
-                        <li class="u"><span>u</span></li>
-                        <li class="v"><span>v</span></li>
-                        <li class="w"><span>w</span></li>
-                        <li class="x"><span>x</span></li>
-                        <li class="y"><span>y</span></li>
-                        <li class="z"><span>z</span></li>
-                    </ul>
+                <div class="wordInput">
+                    <div class="word-area">
+                        <div class="spans">
+                            <span class="span1">?</span>
+                            <span class="span2">?</span>
+                            <span class="span3">?</span>
+                            <span class="span4">?</span>
+                            <span class="span5">?</span>
+                            <span class="span6">?</span>
+                            <span class="span7">?</span>
+                            <span class="span8">?</span>
+                            <span class="span9">?</span>
+                            <span class="span10">?</span>
+                        </div>
+                    </div>
+                    <div class="btns">
+                        <ul>
+                            <li class="a"><span>a</span></li>
+                            <li class="b"><span>b</span></li>
+                            <li class="c"><span>c</span></li>
+                            <li class="d"><span>d</span></li>
+                            <li class="e"><span>e</span></li>
+                            <li class="f"><span>f</span></li>
+                            <li class="g"><span>g</span></li>
+                            <li class="h"><span>h</span></li>
+                            <li class="i"><span>i</span></li>
+                            <li class="j"><span>j</span></li>
+                            <li class="k"><span>k</span></li>
+                            <li class="l"><span>l</span></li>
+                            <li class="m"><span>m</span></li>
+                            <li class="n"><span>n</span></li>
+                            <li class="o"><span>o</span></li>
+                            <li class="p"><span>p</span></li>
+                            <li class="q"><span>q</span></li>
+                            <li class="r"><span>r</span></li>
+                            <li class="s"><span>s</span></li>
+                            <li class="t"><span>t</span></li>
+                            <li class="u"><span>u</span></li>
+                            <li class="v"><span>v</span></li>
+                            <li class="w"><span>w</span></li>
+                            <li class="x"><span>x</span></li>
+                            <li class="y"><span>y</span></li>
+                            <li class="z"><span>z</span></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
+    <section class="winSection">
+        <div class="title-div">
+            <h1 class="win-title">You Win!</h1>
+        </div>
+        <img src="./win.gif" alt="gif">
+        <img src="./screaming.gif" alt="gif">
     </section>
     <script src="./hangman.js"></script>
 </body>

@@ -10,43 +10,62 @@ body{
 }
 
 section{
-    height: 100vh;
-    width: 100vw;
     background: #1a1a1d;
+}
+
+.word-area .spans{ 
+    margin-top: 5rem;
+    /* background: chocolate; */
 }
 
 .title{
     color: #950740;
     font-size: 3rem;
-    margin-top: 10px;
     font-family: 'ZCOOL KuaiLe', cursive;
+    text-align: center;
+    height: 10vh;
 }
 
 .all-cont{
+    height: 100vh;
+    width: 100vw;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
 }
 
-.man-and-keys{
+.belowTitle{
     display: flex;
-    justify-content: space-between;
-    margin: 50px 100px 50px 100px; 
+    justify-content: space-around;
+    /* background: green; */
+    height: 90vh;
     width: 100vw;
 }
 
 .man-hanging{
-    margin-left: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wordInput{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    /* background: red; */
 }
 
 .btns{
-    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: crimson; */
+    margin-bottom: 4rem;
 }
 
 .btns ul{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
 }
 
 .btns ul li{
@@ -109,7 +128,7 @@ section{
     color: white;
 }
 
-.word-area span{
+.word-area .spans span{
     color: transparent;
 }
 
