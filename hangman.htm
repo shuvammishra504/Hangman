@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./hangman.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="shortcut icon" href="./icon.png" type="image">
     <title>Hangman</title>
 </head>
 <body>
@@ -18,27 +19,27 @@
                 <div class="man-hanging">
                     <svg width="185" height="245" viewBox="0 0 185 245" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="hangman">
-                        <g class="stand">
+                        <g class="stand" id="standId">
                         <path id="Vector 1" d="M1 1C1 168.314 1 233.381 1 245" stroke="#EBEAEA" stroke-width="2"/>
                         <path id="Vector 2" d="M0 1C110.067 1 148.528 1 154 1" stroke="#EBEAEA" stroke-width="2"/>
                         <path id="Vector 3" d="M153 0C153 13.1461 153 25.0639 153 29.3796" stroke="#EBEAEA" stroke-width="2"/>
                         </g>
-                        <g class="head">
+                        <g class="head" id="headId">
                         <path id="Ellipse 1" d="M181.849 57.3837C181.849 72.755 168.592 85.2673 152.174 85.2673C135.756 85.2673 122.5 72.755 122.5 57.3837C122.5 42.0123 135.756 29.5 152.174 29.5C168.592 29.5 181.849 42.0123 181.849 57.3837Z" stroke="#EBEAEA"/>
                         </g>
-                        <g class="body">
+                        <g class="body" id="bodyId">
                         <path id="Vector 4" d="M153.148 85.7673C153.148 144.5 153.148 182.609 153.148 194.322" stroke="#EBEAEA"/>
                         </g>
-                        <g class="hand1">
+                        <g class="hand1" id="hand1Id">
                         <path id="hand1_2" d="M152.661 123.612C140.202 137.953 129.625 150.502 125.893 154.984" stroke="#EBEAEA"/>
                         </g>
-                        <g class="hand2">
+                        <g class="hand2" id="hand2Id">
                         <path id="hand2_2" d="M152.866 123.612C165.073 138.179 175.798 150.595 179.635 154.983" stroke="#EBEAEA"/>
                         </g>
-                        <g class="foot1">
+                        <g class="foot1" id="foot1Id">
                         <path id="foot1_2" d="M153.148 194.322C136.406 214.241 128.651 224.864 126.867 227.686" stroke="#EBEAEA"/>
                         </g>
-                        <g class="foot2">
+                        <g class="foot2" id="foot2Id">
                         <path id="Vector 8" d="M152.882 194.322C169.118 214.675 177.982 224.347 180.385 226.639" stroke="#EBEAEA"/>
                         </g>
                         </g>
@@ -95,10 +96,24 @@
     </section>
     <section class="winSection">
         <div class="title-div">
-            <h1 class="win-title">You Win!</h1>
+            <h1 class="win-title">YOU WIN!</h1>
         </div>
-        <img src="./win.gif" alt="gif">
-        <img src="./screaming.gif" alt="gif">
+        <div class="gif-section">
+            <img class="small-gif" src="./win.gif" alt="gif">
+            <img class="big-gif" src="./screaming.gif" alt="gif">
+        </div>
+        <div class="again-div">
+            <button class="play-again" onClick="window.location.reload();">Play Again!</button>
+        </div>
+    </section>
+    <section class="loseSection">
+        <div class="loseTitle-div">
+            <h1 class="loseTitle">Game over</h1>
+        </div>
+        <img class="background-img" src="./background.png" alt="">
+        <div class="loseButton-div">
+            <button class="loseButton" onClick="window.location.reload();">Play Again!</button>
+        </div>
     </section>
     <script src="./hangman.js"></script>
 </body>

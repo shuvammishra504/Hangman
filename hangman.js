@@ -20,6 +20,10 @@ const hand1 = document.querySelector('.hand1');
 const hand2 = document.querySelector('.hand2');
 const foot1 = document.querySelector('.foot1');
 const foot2 = document.querySelector('.foot2');
+const foot2Id = document.getElementById('foot2Id');
+
+const foot2IdClass = getComputedStyle(foot2Id);
+// console.log(foot2IdClass); 
 
 const a = document.querySelector('.a')
 const b = document.querySelector('.b')
@@ -48,10 +52,24 @@ const x = document.querySelector('.x')
 const y = document.querySelector('.y')
 const z = document.querySelector('.z')
 
-const input = document.querySelector('.input')
-const button = document.querySelector('.button')
-const ptag = document.querySelector('.ptag')
+const winSection = document.querySelector('.winSection')
+const loseSection = document.querySelector('.loseSection')
 
+const playAgainBtn = document.querySelector('.play-again')
+const loseplayAgainBtn = document.querySelector('.loseButton')
+
+playAgainBtn.addEventListener('click', playAgain);
+loseplayAgainBtn.addEventListener('click', losePlayAgain);
+
+function playAgain(){
+    winSection.style.display = "none";
+    gameSection.style.display = "flex";
+}
+
+function losePlayAgain(){
+    loseSection.style.display = "none";
+    gameSection.style.display = "flex";
+}
 
     let words =['naphtha','awkward','abruptly', 'foxglove', 'lengths', 'subway', 'absurd', 'frazzled', 'lucky', 'swivel','abyss', 'frizzled', 'luxury', 'syndrome', 'affix', 'fuchsia', 'lymph', 'thriftless', 'askew', 'funny', 'marquis', 'thumbscrew', 'avenue', 'gabby', 'matrix', 'topaz', 'galaxy', 'megahertz', 'transcript', 'axiom', 'galvanize', 'microwave', 'transgress', 'azure', 'gazebo', 'mnemonic', 'transplant', 'bagpipes', 'giaour', 'mystify', 'triphthong', 'bandwagon', 'gizmo', 'twelfth', 'banjo', 'glowworms', 'nightclub', 'twelfths', 'bayou', 'glyph', 'nowadays', 'known', 'beekeeper', 'gnarly', 'numbskull', 'unworthy', 'gnostic',   'nymph', 'unzip', 'blitz', 'gossip', 'onyx', 'uptown', 'blizzard', 'grogginess', 'ovary', 'vaporize', 'boggle', 'haiku', 'oxidize', 'vixen', 'book', 'hazard', 'oxygen', 'vodka', 'boxcar', 'hyphen', 'boxful', 'iatrogenic', 'peekaboo', 'vortex', 'buckaroo', 'icebox', 'phlegm', 'voyeurism', 'buffalo', 'injury', 'pixel', 'walkway', 'buffoon','ivory', 'pizza', 'waltz', 'buxom', 'ivy', 'pneumonia', 'wave', 'buzzard', 'jackpot', 'polka', 'wavy', 'buzzing', 'jaundice', 'pshaw', 'waxy', 'buzzwords', 'jawbreaker', 'psyche', 'wellspring', 'caliph', 'jaywalk', 'wheezy', 'cobweb', 'jazziest', 'puzzling', 'whiskey', 'cockiness', 'jazzy', 'quartz', 'whizzing', 'croquet', 'jelly', 'queue', 'whomever', 'crypt', 'jigsaw', 'quips', 'wimpy', 'curacao', 'jinx', 'quixotic', 'witchcraft', 'cycle', 'jiujitsu', 'quiz', 'wizard', 'jockey', 'quizzes', 'woozy', 'dirndl', 'ogging', 'quorum', 'wristwatch', 'disavow', 'joking', 'wyvern', 'dizzying', 'jovial', 'rhubarb', 'xylophone', 'duplex', 'joyful', 'rhythm', 'yachtsman', 'dwarves', 'juicy', 'rickshaw', 'yippee', 'embezzle', 'jukebox', 'schnapps', 'yoked', 'equip', 'jumbo', 'scratch', 'youthful', 'espionage', 'kayak', 'shiv', 'yummy', 'euouae', 'kazoo', 'snazzy', 'zephyr', 'exodus', 'keyhole', 'sphinx', 'zigzag', 'faking', 'khaki', 'spritz', 'zigzag', 'fishhook', 'kilobyte', 'squawk', 'zilch', 'fixable', 'kiosk', 'staff', 'zipper', 'fjord', 'kitsch', 'strength', 'zodiac', 'flapjack', 'kiwifruit', 'strengths', 'zombie', 'flopping', 'klutz', 'stretch', 'fluffiness', 'knapsack', 'stronghold', 'flyby', 'larynx', 'stymied']
 
@@ -65,7 +83,6 @@ const ptag = document.querySelector('.ptag')
     //getting a random word
     let randomWordCalc = getRandomWord(0, words.length - 1);
     let randomWordValue = words[randomWordCalc];
-    console.log(randomWordValue);
 
     // splitting the letters
     let splitRandom = randomWordValue.split("");
@@ -139,6 +156,7 @@ const ptag = document.querySelector('.ptag')
     getRandomWord();
 
     let correctLetters = 0;
+    let lose = 0;
 function checkLetter(){
     a.addEventListener('click', ClickA);
     b.addEventListener('click', ClickB);
@@ -10593,11 +10611,20 @@ function checkLetter(){
             function winWinWin(){
                 if(correctLetters === lengthOfWords){
                     gameSection.style.display = "none";
+                    winSection.style.display = "flex";
                     correctLetters = 0;
                 }
             }
-            setInterval(winWinWin, 1000)
+            setInterval(winWinWin, 1000);
+            function losoLoseLose() {
+                if(foot2Id.classList.contains('newFoot2')){
+                    gameSection.style.display = "none";
+                    loseSection.style.display = "flex";
+                }
+            }
 
+            setInterval(losoLoseLose, 1000)
+            // console.log(lose)
 }   
 
 checkLetter();
