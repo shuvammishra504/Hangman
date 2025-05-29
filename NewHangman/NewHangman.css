@@ -1,0 +1,237 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--primary);
+}
+
+main{
+    height: 100vh;
+    width: 100%;
+}
+
+:root{
+    --primary: #00203FFF;
+    --secondary: #ADEFD1FF;
+}
+
+.game-section{
+    height: 100%;
+    width: 100%;
+    /* background: rebeccapurple; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+}
+
+.lose-section, .win-section{
+    height: 100vh;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.winTitleDiv, .loseTitleDiv{
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.loseCorrectWordDiv-button, .winCorrectWordDiv-button{
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.loseCorrectWordDiv-button button, .winCorrectWordDiv-button button{
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background: rgb(226, 1, 1);
+    height: 10%;
+    width: 10%;
+    cursor: pointer;
+    margin: 2rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.loseCorrectWordDiv-button button:hover, .winCorrectWordDiv-button button:hover{
+    background: rgb(189, 0, 0);
+}
+
+.man-section{
+    height: 100%;
+    width: 40%;
+    /* background: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Keys-section{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.spans{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btns{
+    height: 50%;
+}
+
+.btn{
+    z-index: 9999;
+}
+
+.span{
+    font-size: 1.8rem;
+    margin-right: 10px;
+    border-bottom: 1px solid var(--secondary);
+    color: var(--primary);
+}
+
+.btns ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-areas: 
+    "a b c d e f g"
+    "h i j k l m n"
+    "o p q r s t u "
+    "o v w xbtn ybtn z u";
+}
+
+#keyboardInput{
+    position: absolute;
+    color: transparent;
+    background: transparent;
+    border: none;
+    outline: none;
+    height: 100vh;
+    width: 100%;
+    cursor: default;
+}
+
+.stand, .head, .hand1, .hand2, .foot1, .foot2, .body{
+    display: none;
+}
+
+.a{
+    grid-area: a;
+}
+.b{
+    grid-area: b;
+}
+.c{
+    grid-area: c;
+}
+.d{
+    grid-area: d;
+}
+.e{
+    grid-area: e;
+}
+.f{
+    grid-area: f;
+}
+.g{
+    grid-area: g;
+}
+.h{
+    grid-area: h;
+}
+.i{
+    grid-area: i;
+}
+.j{
+    grid-area: j;
+}
+.k{
+    grid-area: k;
+}
+.l{
+    grid-area: l;
+}
+.m{
+    grid-area: m;
+}
+.n{
+    grid-area: n;
+}
+.o{
+    grid-area: o;
+    height: 50px;
+}
+.p{
+    grid-area: p;
+}
+.q{
+    grid-area: q;
+}
+.r{
+    grid-area: r;
+}
+.s{
+    grid-area: s;
+}
+.t{
+    grid-area: t;
+}
+.u{
+    grid-area: u;
+    height: 50px;
+}
+.v{
+    height: 50px;
+    grid-area: v;
+}
+.w{
+    grid-area: w;
+}
+.x{
+    grid-area: xbtn;
+    height: 50px;
+}
+.y{
+    height: 50px;
+    grid-area: ybtn;
+}
+.z{
+    grid-area: z;
+}
+
+.btns ul li{
+    list-style: none;
+    padding: 15px 18px 15px 18px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid var(--secondary);
+    transition: all 0.2s ease-in-out;
+    color: rgb(218, 218, 218);
+}
+
+.btns ul li:hover{
+    background: var(--secondary);
+    color: black;
+}

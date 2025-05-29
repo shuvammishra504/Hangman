@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./NewHangman.css">
+    <title>Hangman</title>
+</head>
+<body>
+    <main>
+        <div class="game-section">
+            <input type="text" maxlength="1" id="keyboardInput" autofocus>
+            <p id="keyInputVal" ></p>
+            <section class="man-section">
+                <div class="man-hanging">
+                    <svg width="185" height="245" viewBox="0 0 185 245" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="hangman">
+                        <g class="stand" id="standId">
+                        <path id="Vector 1" d="M1 1C1 168.314 1 233.381 1 245" stroke="#EBEAEA" stroke-width="2"/>
+                        <path id="Vector 2" d="M0 1C110.067 1 148.528 1 154 1" stroke="#EBEAEA" stroke-width="2"/>
+                        <path id="Vector 3" d="M153 0C153 13.1461 153 25.0639 153 29.3796" stroke="#EBEAEA" stroke-width="2"/>
+                        </g>
+                        <g class="head" id="headId">
+                        <path id="Ellipse 1" d="M181.849 57.3837C181.849 72.755 168.592 85.2673 152.174 85.2673C135.756 85.2673 122.5 72.755 122.5 57.3837C122.5 42.0123 135.756 29.5 152.174 29.5C168.592 29.5 181.849 42.0123 181.849 57.3837Z" stroke="#EBEAEA"/>
+                        </g>
+                        <g class="body" id="bodyId">
+                        <path id="Vector 4" d="M153.148 85.7673C153.148 144.5 153.148 182.609 153.148 194.322" stroke="#EBEAEA"/>
+                        </g>
+                        <g class="hand1" id="hand1Id">
+                        <path id="hand1_2" d="M152.661 123.612C140.202 137.953 129.625 150.502 125.893 154.984" stroke="#EBEAEA"/>
+                        </g>
+                        <g class="hand2" id="hand2Id">
+                        <path id="hand2_2" d="M152.866 123.612C165.073 138.179 175.798 150.595 179.635 154.983" stroke="#EBEAEA"/>
+                        </g>
+                        <g class="foot1" id="foot1Id">
+                        <path id="foot1_2" d="M153.148 194.322C136.406 214.241 128.651 224.864 126.867 227.686" stroke="#EBEAEA"/>
+                        </g>
+                        <g class="foot2" id="foot2Id">
+                        <path id="Vector 8" d="M152.882 194.322C169.118 214.675 177.982 224.347 180.385 226.639" stroke="#EBEAEA"/>
+                        </g>
+                        </g>
+                        </svg>
+                </div>
+            </section>
+            <section class="Keys-section">
+                <div class="spans">
+                    
+                </div>
+                <div class="btns">
+                    <ul>
+                        <li class="a btn">a</li>
+                        <li class="b btn">b</li>
+                        <li class="c btn">c</li>
+                        <li class="d btn">d</li>
+                        <li class="e btn">e</li>
+                        <li class="f btn">f</li>
+                        <li class="g btn">g</li>
+                        <li class="h btn">h</li>
+                        <li class="i btn">i</li>
+                        <li class="j btn">j</li>
+                        <li class="k btn">k</li>
+                        <li class="l btn">l</li>
+                        <li class="m btn">m</li>
+                        <li class="n btn">n</li>
+                        <li class="o btn">o</li>
+                        <li class="p btn">p</li>
+                        <li class="q btn">q</li>
+                        <li class="r btn">r</li>
+                        <li class="s btn">s</li>
+                        <li class="t btn">t</li>
+                        <li class="u btn">u</li>
+                        <li class="v btn">v</li>
+                        <li class="w btn">w</li>
+                        <li class="x btn">x</li>
+                        <li class="y btn">y</li>
+                        <li class="z btn">z</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <div class="win-section">
+            <div class="winTitleDiv">
+                <h1 class="winTitle">You Win!</h1>
+            </div>
+            <div class="winCorrectWordDiv-button">
+                <h3 class="winCorrectWord">The word is:</h3>
+                <button onclick="window.location.reload();">Play Again</button>
+            </div>
+        </div>
+        <div class="lose-section">
+            <div class="loseTitleDiv">
+                <h1 class="loseTitle">You Lose</h1>
+            </div>
+            <div class="loseCorrectWordDiv-button">
+                <h3 class="loseCorrectWord">The correct word was:</h3>
+                <button onclick="window.location.reload();">Play Again</button>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./NewHangman.js"></script>
+</body>
+</html>
